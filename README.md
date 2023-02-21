@@ -1,7 +1,7 @@
 # Full Stack Web Development
 Full Stack Web Development, University of Helsinki
 
-[Course Homepage](https://fullstackopen.com/zh)
+[Course Homepage](https://fullstackopen.com/en)
 
 [Course Introduction](https://studies.helsinki.fi/courses/cu/hy-CU-142971782-2020-08-01/CSM141081/Full_Stack_Web_Development)
 
