@@ -16,7 +16,7 @@ Finish Date:
 
 [Course Infomation](https://studies.helsinki.fi/courses/cur/otm-861c248f-e4e4-43df-a69a-50fd206afabf)
 
-[Assignment Commit](https://studies.cs.helsinki.fi/stats/courses/fullstackopen)
+[Assignments Submission](https://studies.cs.helsinki.fi/stats/courses/fullstackopen)
 
 [Official Github](https://github.com/orgs/fullstack-hy2020/repositories)
 
