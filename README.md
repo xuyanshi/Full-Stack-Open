@@ -1,7 +1,7 @@
 # Full Stack Web Development
 Full Stack Web Development, University of Helsinki
 
-Start Date:
+Start Date: Sun Mar 12 2023
 
 Finish Date:
 
