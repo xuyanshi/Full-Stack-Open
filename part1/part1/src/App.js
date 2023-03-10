@@ -22,7 +22,7 @@
 //   );
 // }
 
-const Hello = () => {
+const Hello = (props) => {
   return (
     <div>
       <p>It's a component (组件).</p>
