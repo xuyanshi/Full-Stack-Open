@@ -25,18 +25,19 @@
 const Hello = (props) => {
   return (
     <div>
-      <p>It's a component: {props.name}</p>
+      <p>Hello {props.name}, you're {props.age} years old.</p>
     </div>
   )
 }
 
 const App = () => { 
-  const name = "maitian"
+  const name = "Maitian"
   const age = 24
   return (
   <div>
     <h1>Hello World</h1>
-    <Hello name = "Emo" />
+    <Hello name="Emo" age="23" />
+    <Hello name={name} age={age} />
   </div>
   )
 }
