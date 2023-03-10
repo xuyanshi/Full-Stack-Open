@@ -25,7 +25,7 @@
 const Hello = (props) => {
   return (
     <div>
-      <p>It's a component: {props}</p>
+      <p>It's a component: {props.name}</p>
     </div>
   )
 }
@@ -37,7 +37,7 @@ const App = () => {
   return (
   <div>
     <h1>Hello World</h1>
-    <Hello />
+    <Hello name = "Emo" />
   </div>
   )
 }
