@@ -34,11 +34,11 @@ const App = () => {
   const name = "Maitian"
   const age = 24
   return (
-  <div>
+  <>
     <h1>Hello World</h1>
     <Hello name="Emo" age="23" />
     <Hello name={name} age={age} />
-  </div>
+  </>
   )
 }
 
