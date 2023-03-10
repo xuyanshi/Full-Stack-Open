@@ -4,6 +4,15 @@ const Header = (props) => {
     )
 }
 
+const Content = (props) => {
+
+
+}
+
+const Total = (props) => {
+    
+}
+
 function App() {
     const course = 'Half Stack application development'
     const part1 = 'Fundamentals of React'
