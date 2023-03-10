@@ -23,7 +23,11 @@
 // }
 
 const Hello = () => {
-
+  return (
+    <div>
+      <p>It's a component (组件).</p>
+    </div>
+  )
 }
 
 const App = () => { 
