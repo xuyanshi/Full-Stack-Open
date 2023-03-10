@@ -23,9 +23,12 @@
 // }
 
 const App = () => { 
+  console.log('Hello from component')
+  return (
   <div>
-    <p>Hello World</p>
+    <h1>Hello World</h1>
   </div>
+  )
 }
 
 export default App;
