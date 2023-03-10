@@ -31,9 +31,8 @@ const Hello = (props) => {
 }
 
 const App = () => { 
-  const now = new Date()
-  const a = 10 
-  const b = 20
+  const name = "maitian"
+  const age = 24
   return (
   <div>
     <h1>Hello World</h1>
