@@ -1,10 +1,6 @@
 import { useState } from 'react'
 
-const Display = ({counter}) => {
-  return (
-    <div>{counter}</div>
-  )
-}
+const Display = ({counter}) => <div>{counter}</div>
 
 const Button = (props) => {
   return (
