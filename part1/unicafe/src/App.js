@@ -44,17 +44,21 @@ const App = () => {
     const [good, setGood] = useState(0)
     const [neutral, setNeutral] = useState(0)
     const [bad, setBad] = useState(0)
+    const [voted, setVoted] = useState(false)
 
     const voteForGood = () => {
         setGood(good + 1)
+        setVoted(true)
     }
 
     const voteForNeutral = () => {
         setNeutral(neutral + 1)
+        setVoted(true)
     }
 
     const voteForBad = () => {
         setBad(bad + 1)
+        setVoted(true)
     }
 
     return (
