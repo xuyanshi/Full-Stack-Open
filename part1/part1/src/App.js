@@ -6,6 +6,14 @@ const Display = (props) => {
   )
 }
 
+const Button = (props) => {
+  return (
+    <button onClick={props.onClick}>
+      {props.text}
+    </button>
+  )
+}
+
 const App = () => {
   const [ counter, setCounter ] = useState(0)
 
