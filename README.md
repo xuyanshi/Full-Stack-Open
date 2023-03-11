@@ -5,9 +5,23 @@ Start Date: Sat Mar 11 2023
 
 Finish Date:
 
+## Parts
+- [x] Part 0: Fundamentals of Web apps (2023-03-11)
+- [x] Part 1: Introduction to React (2023-03-11)
+- [ ] Part 2: Communicating with server
+- [ ] Part 3: Programming a server with NodeJS and Express
+- [ ] Part 4: Testing Express servers, user administration
+- [ ] Part 5: Testing React apps
+- [ ] Part 6: Advanced state management
+- [ ] Part 7: React router, custom hooks, styling app with CSS and webpack (Certificate, 2023)
+- [ ] Part 8: GraphQL
+- [ ] Part 9: TypeScript
+- [ ] Part 10: React Native
+- [ ] Part 11: CI/CD
+- [ ] Part 12: Containers
+- [ ] Part 13: Using relational databases
+
 ## Certificates
-
-
 ---
 
 [Course Homepage](https://fullstackopen.com/en)
