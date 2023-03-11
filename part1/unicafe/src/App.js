@@ -1,6 +1,6 @@
 import {useState} from 'react'
 
-const Buttom = ({handleClick, text}) => {
+const Button = ({handleClick, text}) => {
     return (
         <button onClick={handleClick}>{text}</button>
     )
@@ -40,13 +40,18 @@ const App = () => {
     const calPositive = (g, n, b) => {
         return (100 * g / (g + n + b)) + ' %'
     }
-    
+
+    // a proper place to define a component
+    const Statistics = (props) => {
+        // ...
+    }
+
     return (
         <div>
             <h1>give feedback</h1>
-            <Buttom handleClick={voteForGood} text="good"/>
-            <Buttom handleClick={voteForNeutral} text="neutral"/>
-            <Buttom handleClick={voteForBad} text="bad"/>
+            <Button handleClick={voteForGood} text="good"/>
+            <Button handleClick={voteForNeutral} text="neutral"/>
+            <Button handleClick={voteForBad} text="bad"/>
             <h2>statistics</h2>
             <Feedback title={'good'} data={good}/>
             <Feedback title={'neutral'} data={neutral}/>
