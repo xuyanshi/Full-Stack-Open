@@ -23,8 +23,7 @@
 // }
 
 const Hello = (props) => {
-  const name = props.name
-  const age = props.age
+  const {name, age} = props
   const bornYear = () => new Date().getFullYear() - age
   return (
     <div>
