@@ -8,6 +8,11 @@ const History = (props) => {
             </div>
         )
     }
+    return (
+        <div>
+            button press history: {props.allClicks.join(' ')}
+        </div>
+    )
 }
 
 const App = () => {
