@@ -29,17 +29,17 @@ const App = () => {
     }
     setClicks(newClicks)
   }
-  
+
   return (
     <div>
-      {left}
-      <button onClick={() => setLeft(left + 1)}>
+      {clicks.left}
+      <button onClick={handleLeftClick}>
         left
       </button>
-      <button onClick={() => setRight(right + 1)}>
+      <button onClick={handleRightClick}>
         right
       </button>
-      {right}
+      {clicks.right}
     </div>
   )
 }
