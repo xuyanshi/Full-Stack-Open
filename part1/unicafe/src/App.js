@@ -14,7 +14,29 @@ const Feedback = (props) => {
 
 // a proper place to define a component
 const Statistics = (props) => {
-    // ...
+
+    const countAll = (g, n, b) => {
+        return g + n + b
+    }
+
+    const calAverage = (g, n, b) => {
+        return (g - b) / (g + n + b)
+    }
+
+    const calPositive = (g, n, b) => {
+        return (100 * g / (g + n + b)) + ' %'
+    }
+
+    return (
+        <>
+            <Feedback title={'good'} data={props.good}/>
+            <Feedback title={'neutral'} data={props.neutral}/>
+            <Feedback title={'bad'} data={props.bad}/>
+            <Feedback title={'all'} data={countAll(props.good, props.neutral, props.bad)}/>
+            <Feedback title={'average'} data={calAverage(props.good, props.neutral, props.bad)}/>
+            <Feedback title={'positive'} data={calPositive(props.good, props.neutral, props.bad)}/>
+        </>
+    )
 }
 
 const App = () => {
@@ -35,18 +57,6 @@ const App = () => {
         setBad(bad + 1)
     }
 
-    const countAll = (g, n, b) => {
-        return g + n + b
-    }
-
-    const calAverage = (g, n, b) => {
-        return (g - b) / (g + n + b)
-    }
-
-    const calPositive = (g, n, b) => {
-        return (100 * g / (g + n + b)) + ' %'
-    }
-    
     return (
         <div>
             <h1>give feedback</h1>
@@ -54,12 +64,7 @@ const App = () => {
             <Button handleClick={voteForNeutral} text="neutral"/>
             <Button handleClick={voteForBad} text="bad"/>
             <h2>statistics</h2>
-            <Feedback title={'good'} data={good}/>
-            <Feedback title={'neutral'} data={neutral}/>
-            <Feedback title={'bad'} data={bad}/>
-            <Feedback title={'all'} data={countAll(good, neutral, bad)}/>
-            <Feedback title={'average'} data={calAverage(good, neutral, bad)}/>
-            <Feedback title={'positive'} data={calPositive(good, neutral, bad)}/>
+            <Statistics good={good} neutral={neutral} bad={bad}/>
         </div>
     )
 }
