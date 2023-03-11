@@ -11,6 +11,9 @@ const Button = ({onClick, text}) => (
 const App = () => {
   const [ counter, setCounter ] = useState(0)
 
+  const [left, setLeft] = useState(0)
+  const [right, setRight] = useState(0)
+
   const increaseByOne = () => setCounter(counter + 1)
   const decreaseByOne = () => setCounter(counter - 1)
   const setToZero = () => setCounter(0)
