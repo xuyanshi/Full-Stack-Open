@@ -15,7 +15,12 @@ const App = () => {
   console.log("rending...",counter)
 
   return (
-    <div>{counter}</div>
+    <div>
+      <div>{counter}</div>
+      <button>
+        
+      </button>
+    </div>
   )
 }
 
