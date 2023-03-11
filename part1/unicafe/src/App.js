@@ -12,6 +12,11 @@ const Feedback = (props) => {
     )
 }
 
+// a proper place to define a component
+const Statistics = (props) => {
+    // ...
+}
+
 const App = () => {
     // save clicks of each button to its own state
     const [good, setGood] = useState(0)
@@ -41,12 +46,7 @@ const App = () => {
     const calPositive = (g, n, b) => {
         return (100 * g / (g + n + b)) + ' %'
     }
-
-    // a proper place to define a component
-    const Statistics = (props) => {
-        // ...
-    }
-
+    
     return (
         <div>
             <h1>give feedback</h1>
