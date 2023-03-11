@@ -33,10 +33,13 @@ const App = () => {
         return g + n + b
     }
 
-    const countAverage = (g, n, b) => {
+    const calAverage = (g, n, b) => {
         return (g - b) / (g + n + b)
     }
-    
+
+    const calPositive = (g, n, b) => {
+        return g / (g + n + b)
+    }
     return (
         <div>
             <h1>give feedback</h1>
@@ -48,7 +51,7 @@ const App = () => {
             <Feedback title={'neutral'} data={neutral}/>
             <Feedback title={'bad'} data={bad}/>
             <Feedback title={'all'} data={countAll(good, neutral, bad)}/>
-            <Feedback title={'average'} data={countAverage(good, neutral, bad)}/>
+            <Feedback title={'average'} data={calAverage(good, neutral, bad)}/>
         </div>
     )
 }
