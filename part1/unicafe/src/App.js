@@ -40,6 +40,7 @@ const App = () => {
     const calPositive = (g, n, b) => {
         return (100 * g / (g + n + b)) + ' %'
     }
+    
     return (
         <div>
             <h1>give feedback</h1>
