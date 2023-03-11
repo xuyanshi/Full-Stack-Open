@@ -40,6 +40,7 @@ const App = () => {
             <Feedback title={'neutral'} data={neutral}/>
             <Feedback title={'bad'} data={bad}/>
             <Feedback title={'all'} data={good + neutral + bad}/>
+            <Feedback title={'average'} data={good}/>
         </div>
     )
 }
