@@ -13,7 +13,13 @@ const App = () => {
 
     const [selected, setSelected] = useState(0)
 
-    
+    const getNextAnecdote = () => {
+        let nextIndex = Math.floor(Math.random() * anecdotes.length)
+        while (nextIndex === selected) {
+            nextIndex = Math.floor(Math.random() * anecdotes.length)
+        }
+        setSelected(nextIndex)
+    }
     return (
         <div>
             {anecdotes[selected]}
