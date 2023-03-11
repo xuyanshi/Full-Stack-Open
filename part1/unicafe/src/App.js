@@ -27,6 +27,12 @@ const Statistics = (props) => {
         return (100 * g / (g + n + b)) + ' %'
     }
 
+    if (!props.voted) {
+        return (
+            <div>No feedback given</div>
+        )
+    }
+
     return (
         <>
             <Feedback title={'good'} data={props.good}/>
@@ -68,7 +74,7 @@ const App = () => {
             <Button handleClick={voteForNeutral} text="neutral"/>
             <Button handleClick={voteForBad} text="bad"/>
             <h2>statistics</h2>
-            <Statistics good={good} neutral={neutral} bad={bad}/>
+            <Statistics good={good} neutral={neutral} bad={bad} voted={voted}/>
         </div>
     )
 }
