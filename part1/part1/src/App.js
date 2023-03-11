@@ -18,12 +18,8 @@ const App = () => {
     return (
         <div>
             {clicks.left}
-            <button onClick={handleLeftClick}>
-                left
-            </button>
-            <button onClick={handleRightClick}>
-                right
-            </button>
+            <button onClick={handleLeftClick}>left</button>
+            <button onClick={handleRightClick}>right</button>
             {clicks.right}
             <p>{allClicks.join(' ')}</p>
         </div>
