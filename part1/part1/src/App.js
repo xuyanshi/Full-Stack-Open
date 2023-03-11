@@ -7,7 +7,7 @@ const App = () => {
     })
 
     const [allClicks, setAll] = useState([])
-    
+
     const handleLeftClick = () =>
         setClicks({...clicks, left: clicks.left + 1})
 
@@ -25,6 +25,7 @@ const App = () => {
                 right
             </button>
             {clicks.right}
+            <p>{allClicks.join(' ')}</p>
         </div>
     )
 }
