@@ -24,12 +24,13 @@
 
 const Hello = (props) => {
   const bornYear = () => {
-    const yearNow = new Date().getFullYear
+    const yearNow = new Date().getFullYear()
     return yearNow-props.age
   }
   return (
     <div>
       <p>Hello {props.name}, you're {props.age} years old.</p>
+      <p>You were probably born in {bornYear()}.</p>
     </div>
   )
 }
