@@ -9,19 +9,11 @@ const Part = ({part}) =>
 
 const Content = ({parts}) =>
     <>
-        <Part
-            part={parts[0]}
-        />
-        <Part
-            part={parts[1]}
-        />
-        <Part
-            part={parts[2]}
-        />
-        <Part
-            part={parts[3]}
-        />
+        {parts.map(part =>
+            <Part key={part.id} part={part}/>
+        )}
     </>
+
 
 const Course = ({course}) => {
     const total = course.parts.reduce((accumulator, currentValue) => {
@@ -87,7 +79,9 @@ const App = () => {
 
     return (
         <>
-
+            {courses.map(c =>
+                <Course key={c.id} course={c}/>
+            )}
         </>
     )
 }
