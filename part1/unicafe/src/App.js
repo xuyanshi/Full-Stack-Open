@@ -1,19 +1,23 @@
 import {useState} from 'react'
 
-const Button = ({handleClick, text}) => {
+const Button = ({goodClick, neutralClick, badClick}) => {
     return (
-        <button onClick={handleClick}>{text}</button>
+        <div>
+            <button onClick={goodClick}>good</button>
+            <button onClick={neutralClick}>neutral</button>
+            <button onClick={badClick}>bad</button>
+        </div>
     )
 }
 
-const Feedback = (props) => {
+const StatisticLine = ({text, value}) => {
     return (
-        <p>{props.title} {props.data}</p>
+        <p>{text} {value}</p>
     )
 }
 
 // a proper place to define a component
-const Statistics = (props) => {
+const Statistics = ({good, neutral, bad, voted}) => {
 
     const countAll = (g, n, b) => {
         return g + n + b
@@ -27,7 +31,7 @@ const Statistics = (props) => {
         return (100 * g / (g + n + b)) + ' %'
     }
 
-    if (!props.voted) {
+    if (!voted) {
         return (
             <div>No feedback given</div>
         )
@@ -35,12 +39,12 @@ const Statistics = (props) => {
 
     return (
         <div>
-            <Feedback title={'good'} data={props.good}/>
-            <Feedback title={'neutral'} data={props.neutral}/>
-            <Feedback title={'bad'} data={props.bad}/>
-            <Feedback title={'all'} data={countAll(props.good, props.neutral, props.bad)}/>
-            <Feedback title={'average'} data={calAverage(props.good, props.neutral, props.bad)}/>
-            <Feedback title={'positive'} data={calPositive(props.good, props.neutral, props.bad)}/>
+            <StatisticLine text={'good'} value={good}/>
+            <StatisticLine text={'neutral'} value={neutral}/>
+            <StatisticLine text={'bad'} value={bad}/>
+            <StatisticLine text={'all'} value={countAll(good, neutral, bad)}/>
+            <StatisticLine text={'average'} value={calAverage(good, neutral, bad)}/>
+            <StatisticLine text={'positive'} value={calPositive(good, neutral, bad)}/>
         </div>
     )
 }
@@ -70,9 +74,7 @@ const App = () => {
     return (
         <div>
             <h1>give feedback</h1>
-            <Button handleClick={voteForGood} text="good"/>
-            <Button handleClick={voteForNeutral} text="neutral"/>
-            <Button handleClick={voteForBad} text="bad"/>
+            <Button goodClick={voteForGood} neutralClick={voteForNeutral} badClick={voteForBad}/>
             <h2>statistics</h2>
             <Statistics good={good} neutral={neutral} bad={bad} voted={voted}/>
         </div>
