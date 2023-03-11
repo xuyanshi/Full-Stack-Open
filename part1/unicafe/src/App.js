@@ -20,7 +20,8 @@ const App = () => {
             <h1>give feedback</h1>
             <h2>statistics</h2>
             <Feedback rank={'good'} cnt={good}/>
-            
+            <Feedback rank={'neutral'} cnt={neutral}/>
+            <Feedback rank={'bad'} cnt={bad}/>
         </div>
     )
 }
