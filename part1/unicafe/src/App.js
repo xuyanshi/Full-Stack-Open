@@ -1,7 +1,9 @@
 import {useState} from 'react'
 
-const Buttom = (props) => {
-
+const Buttom = ({handleClick, text}) => {
+    return (
+        <button onClick={handleClick}>{text}</button>
+    )
 }
 
 const Feedback = (props) => {
@@ -15,9 +17,11 @@ const App = () => {
     const [neutral, setNeutral] = useState(0)
     const [bad, setBad] = useState(0)
 
+    
     return (
         <div>
             <h1>give feedback</h1>
+
             <h2>statistics</h2>
             <Feedback rank={'good'} cnt={good}/>
             <Feedback rank={'neutral'} cnt={neutral}/>
