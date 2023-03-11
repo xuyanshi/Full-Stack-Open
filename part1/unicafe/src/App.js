@@ -34,14 +34,14 @@ const Statistics = (props) => {
     }
 
     return (
-        <>
+        <div>
             <Feedback title={'good'} data={props.good}/>
             <Feedback title={'neutral'} data={props.neutral}/>
             <Feedback title={'bad'} data={props.bad}/>
             <Feedback title={'all'} data={countAll(props.good, props.neutral, props.bad)}/>
             <Feedback title={'average'} data={calAverage(props.good, props.neutral, props.bad)}/>
             <Feedback title={'positive'} data={calPositive(props.good, props.neutral, props.bad)}/>
-        </>
+        </div>
     )
 }
 
