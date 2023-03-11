@@ -21,9 +21,12 @@ const App = () => {
         setSelected(nextIndex)
     }
     return (
-        <div>
-            {anecdotes[selected]}
-        </div>
+        <>
+            <div>
+                {anecdotes[selected]}
+            </div>
+            <button onClick={getNextAnecdote}>next anecdote</button>
+        </>
     )
 }
 
