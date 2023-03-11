@@ -23,6 +23,8 @@
 // }
 
 const Hello = (props) => {
+  const name = props.name
+  const age = props.age
   const bornYear = () => {
     const yearNow = new Date().getFullYear()
     return yearNow-props.age
