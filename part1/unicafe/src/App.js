@@ -28,6 +28,7 @@ const App = () => {
     const voteForBad = () => {
         setBad(bad + 1)
     }
+    
     return (
         <div>
             <h1>give feedback</h1>
