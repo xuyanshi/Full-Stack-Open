@@ -3,6 +3,9 @@ import { useState } from 'react'
 const App = () => {
   const [ counter, setCounter ] = useState(0)
 
+  const increaseByOne = () => setCounter(counter + 1)
+  const setToZero = () => setCounter(0)
+
   setTimeout(
     () => setCounter(counter + 1),
     1000
@@ -13,10 +16,10 @@ const App = () => {
   return (
     <div>
       <div>{counter}</div>
-      <button onClick={() => setCounter(counter+1)}>
+      <button onClick={increaseByOne}>
         plus
       </button>
-      <button onClick={() => setCounter(0)}>
+      <button onClick={setToZero}>
         reset
       </button>
     </div>
