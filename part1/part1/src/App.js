@@ -8,6 +8,8 @@ const App = () => {
     1000
   )
 
+  console.log("rending...",counter)
+
   return (
     <div>{counter}</div>
   )
