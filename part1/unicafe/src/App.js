@@ -17,7 +17,17 @@ const App = () => {
     const [neutral, setNeutral] = useState(0)
     const [bad, setBad] = useState(0)
 
-    
+    const voteForGood = () => {
+        setGood(good + 1)
+    }
+
+    const voteForNeutral = () => {
+        setGood(neutral + 1)
+    }
+
+    const voteForBad = () => {
+        setGood(bad + 1)
+    }
     return (
         <div>
             <h1>give feedback</h1>
