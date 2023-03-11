@@ -36,6 +36,7 @@ const App = () => {
     const countAverage = (g, n, b) => {
         return (g - b) / (g + n + b)
     }
+    
     return (
         <div>
             <h1>give feedback</h1>
