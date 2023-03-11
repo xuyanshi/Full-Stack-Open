@@ -16,7 +16,7 @@ const App = () => {
 
   return (
     <div>
-      
+      <Display counter={counter} />
       <button onClick={increaseByOne}>
         plus
       </button>
