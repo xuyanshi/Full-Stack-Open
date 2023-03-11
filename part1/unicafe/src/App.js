@@ -8,7 +8,7 @@ const Buttom = ({handleClick, text}) => {
 
 const Feedback = (props) => {
     return (
-        <p>{props.rank} {props.cnt}</p>
+        <p>{props.title} {props.data}</p>
     )
 }
 const App = () => {
@@ -28,7 +28,7 @@ const App = () => {
     const voteForBad = () => {
         setBad(bad + 1)
     }
-    
+
     return (
         <div>
             <h1>give feedback</h1>
@@ -36,9 +36,10 @@ const App = () => {
             <Buttom handleClick={voteForNeutral} text="neutral"/>
             <Buttom handleClick={voteForBad} text="bad"/>
             <h2>statistics</h2>
-            <Feedback rank={'good'} cnt={good}/>
-            <Feedback rank={'neutral'} cnt={neutral}/>
-            <Feedback rank={'bad'} cnt={bad}/>
+            <Feedback title={'good'} data={good}/>
+            <Feedback title={'neutral'} data={neutral}/>
+            <Feedback title={'bad'} data={bad}/>
+            <Feedback title={'all'} data={good + neutral + bad}/>
         </div>
     )
 }
