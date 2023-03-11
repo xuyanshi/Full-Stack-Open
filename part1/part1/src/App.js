@@ -6,11 +6,6 @@ const App = () => {
   const increaseByOne = () => setCounter(counter + 1)
   const setToZero = () => setCounter(0)
 
-  setTimeout(
-    () => setCounter(counter + 1),
-    1000
-  )
-
   console.log("rending...",counter)
 
   return (
