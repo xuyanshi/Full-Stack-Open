@@ -38,7 +38,7 @@ const App = () => {
             <button onClick={handleLeftClick}>left</button>
             <button onClick={handleRightClick}>right</button>
             {right}
-            <p>{allClicks.join(' ')}</p>
+            <History allClicks={allClicks}/>
         </div>
     )
 }
