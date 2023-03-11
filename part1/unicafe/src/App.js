@@ -29,6 +29,11 @@ const App = () => {
         setBad(bad + 1)
     }
 
+    const countAll = (g, n, b) => {
+        return g + n + b
+    }
+
+    
     return (
         <div>
             <h1>give feedback</h1>
@@ -39,7 +44,7 @@ const App = () => {
             <Feedback title={'good'} data={good}/>
             <Feedback title={'neutral'} data={neutral}/>
             <Feedback title={'bad'} data={bad}/>
-            <Feedback title={'all'} data={good + neutral + bad}/>
+            <Feedback title={'all'} data={countAll(good, neutral, bad)}/>
             <Feedback title={'average'} data={good}/>
         </div>
     )
