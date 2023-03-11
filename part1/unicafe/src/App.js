@@ -22,16 +22,18 @@ const App = () => {
     }
 
     const voteForNeutral = () => {
-        setGood(neutral + 1)
+        setNeutral(neutral + 1)
     }
 
     const voteForBad = () => {
-        setGood(bad + 1)
+        setBad(bad + 1)
     }
     return (
         <div>
             <h1>give feedback</h1>
-
+            <Buttom handleClick={voteForGood} text="good"/>
+            <Buttom handleClick={voteForNeutral} text="neutral"/>
+            <Buttom handleClick={voteForBad} text="bad"/>
             <h2>statistics</h2>
             <Feedback rank={'good'} cnt={good}/>
             <Feedback rank={'neutral'} cnt={neutral}/>
