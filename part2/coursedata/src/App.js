@@ -45,11 +45,16 @@ const App = () => {
         }
     ]
 
+    const total = parts.reduce((accumulator, currentValue) => {
+        // console.log('what is happening', accumulator, currentValue)
+        return accumulator + currentValue.exercises
+    }, 0)
+
     return (
         <div>
             <Header course={course}/>
             <Content parts={parts}/>
-            <Total sum={parts[0].exercises + parts[1].exercises + parts[2].exercises + parts[3].exercises}/>
+            <Total sum={total}/>
         </div>
     )
 }
