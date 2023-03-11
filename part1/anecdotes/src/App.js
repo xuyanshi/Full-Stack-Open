@@ -13,6 +13,7 @@ const App = () => {
 
     const [selected, setSelected] = useState(0)
 
+    
     return (
         <div>
             {anecdotes[selected]}
