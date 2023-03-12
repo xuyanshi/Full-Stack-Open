@@ -58,7 +58,7 @@ const App = () => {
             <form>
                 <div>filter shown with <input value={newQuery} onChange={handleQueryChange}/></div>
             </form>
-            <h3>add a new</h3>
+            <h3>Add a new</h3>
             <form onSubmit={addNewPerson}>
                 <div>name: <input value={newName} onChange={handleNameChange}/></div>
                 <div>number: <input value={newPhone} onChange={handlePhoneChange}/></div>
