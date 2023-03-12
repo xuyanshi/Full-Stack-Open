@@ -1,9 +1,13 @@
 import {useState} from 'react'
 
-const Person = ({person}) => {
-    return (
-        <div>{person.name}</div>
-    )
+const Person = ({person, query}) => {
+    const personName = person.name.toLowerCase()
+    query = query.toLowerCase()
+    if (query === '' || personName.indexOf(query) !== -1) {
+        return (
+            <div>{person.name}</div>
+        )
+    }
 }
 
 const App = () => {
@@ -64,7 +68,7 @@ const App = () => {
             <h2>Numbers</h2>
             <div>
                 {persons.map(person =>
-                    <Person key={person.id} person={person}/>
+                    <Person key={person.id} person={person} query={newQuery}/>
                 )}
             </div>
         </div>
