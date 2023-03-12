@@ -14,10 +14,14 @@ const App = () => {
 
     const addNewName = (event) => {
         event.preventDefault()
+        setPersons(persons.concat({
+            name: newName,
+        }))
+        setNewName('')
     }
 
     const handleNameChange = (event) => {
-
+        setNewName(event.target.value)
     }
 
     return (
@@ -34,6 +38,7 @@ const App = () => {
             <h2>Numbers</h2>
             <div>
                 {persons.map(person =>
+                    // Warning: Keys should be unique so that components maintain their identity across updates.
                     <Person key={person} person={person}/>
                 )}
             </div>
