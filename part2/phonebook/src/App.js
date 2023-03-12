@@ -1,7 +1,9 @@
 import {useState} from 'react'
 
 const Person = ({person}) => {
-
+    return (
+        <div>{person.name}</div>
+    )
 }
 
 const App = () => {
@@ -30,7 +32,11 @@ const App = () => {
                 </div>
             </form>
             <h2>Numbers</h2>
-            ...
+            <div>
+                {persons.map(person =>
+                    <Person key={person} person={person}/>
+                )}
+            </div>
         </div>
     )
 }
