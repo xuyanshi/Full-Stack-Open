@@ -3,15 +3,6 @@ import Filter from "./components/Filter";
 import Persons from "./components/Persons";
 import PersonForm from "./components/PersonForm";
 
-const Person = ({person, query}) => {
-    const personName = person.name.toLowerCase()
-    query = query.toLowerCase()
-    if (query === '' || personName.indexOf(query) !== -1) {
-        return (
-            <div>{person.name}</div>
-        )
-    }
-}
 
 const App = () => {
     const [persons, setPersons] = useState([
@@ -63,11 +54,7 @@ const App = () => {
             <PersonForm addNewPerson={addNewPerson} newName={newName} newPhone={newPhone}
                         handleNameChange={handleNameChange} handlePhoneChange={handlePhoneChange}/>
             <h3>Numbers</h3>
-            <div>
-                {persons.map(person =>
-                    <Person key={person.id} person={person} query={newQuery}/>
-                )}
-            </div>
+            <Persons persons={persons} newQuery={newQuery}/>
         </div>
     )
 }
