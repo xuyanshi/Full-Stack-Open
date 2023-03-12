@@ -1,4 +1,7 @@
 import {useState} from 'react'
+import Filter from "./components/Filter";
+import Persons from "./components/Persons";
+import PersonForm from "./components/PersonForm";
 
 const Person = ({person, query}) => {
     const personName = person.name.toLowerCase()
@@ -55,9 +58,7 @@ const App = () => {
     return (
         <div>
             <h2>Phonebook</h2>
-            <form>
-                <div>filter shown with <input value={newQuery} onChange={handleQueryChange}/></div>
-            </form>
+            <Filter newQuery={newQuery} handleQueryChange={handleQueryChange}/>
             <h3>Add a new</h3>
             <form onSubmit={addNewPerson}>
                 <div>name: <input value={newName} onChange={handleNameChange}/></div>
