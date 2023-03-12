@@ -21,11 +21,10 @@ const App = () => {
             setPersons(persons.concat({
                 name: newName,
             }))
-            setNewName('')
         } else {
             alert(`${newName} is already added to phonebook`)
         }
-
+        setNewName('')
     }
 
     const handleNameChange = (event) => {
