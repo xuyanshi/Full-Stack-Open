@@ -58,6 +58,7 @@ const App = () => {
             <form>
                 <div>filter shown with <input value={newQuery} onChange={handleQueryChange}/></div>
             </form>
+            <h3>add a new</h3>
             <form onSubmit={addNewPerson}>
                 <div>name: <input value={newName} onChange={handleNameChange}/></div>
                 <div>number: <input value={newPhone} onChange={handlePhoneChange}/></div>
@@ -65,7 +66,7 @@ const App = () => {
                     <button type="submit">add</button>
                 </div>
             </form>
-            <h2>Numbers</h2>
+            <h3>Numbers</h3>
             <div>
                 {persons.map(person =>
                     <Person key={person.id} person={person} query={newQuery}/>
