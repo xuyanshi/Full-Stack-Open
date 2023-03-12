@@ -39,6 +39,7 @@ const App = () => {
                 <div>
                     name: <input value={newName} onChange={handleNameChange}/>
                 </div>
+                <div>number: <input/></div>
                 <div>
                     <button type="submit">add</button>
                 </div>
