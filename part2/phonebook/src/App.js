@@ -1,5 +1,9 @@
 import {useState} from 'react'
 
+const Person = ({person}) => {
+
+}
+
 const App = () => {
     const [persons, setPersons] = useState([
         {name: 'Arto Hellas'}
@@ -13,7 +17,7 @@ const App = () => {
     const handleNameChange = (event) => {
 
     }
-    
+
     return (
         <div>
             <h2>Phonebook</h2>
