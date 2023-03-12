@@ -16,6 +16,8 @@ const App = () => {
     const [newName, setNewName] = useState('')
     const [newPhone, setNewPhone] = useState('')
     const [newId, setNewId] = useState(persons.length + 1)
+    const [newQuery, setNewQuery] = useState('')
+
     const addNewPerson = (event) => {
         event.preventDefault()
         let findIdx = persons.findIndex((p) => {
@@ -42,13 +44,18 @@ const App = () => {
         setNewPhone(event.target.value)
     }
 
+    const handleQueryChange = (event) => {
+        setNewQuery(event.target.value)
+    }
+
     return (
         <div>
             <h2>Phonebook</h2>
+            <form>
+                <div>filter shown with <input value={newQuery} onChange={handleQueryChange}/></div>
+            </form>
             <form onSubmit={addNewPerson}>
-                <div>
-                    name: <input value={newName} onChange={handleNameChange}/>
-                </div>
+                <div>name: <input value={newName} onChange={handleNameChange}/></div>
                 <div>number: <input value={newPhone} onChange={handlePhoneChange}/></div>
                 <div>
                     <button type="submit">add</button>
