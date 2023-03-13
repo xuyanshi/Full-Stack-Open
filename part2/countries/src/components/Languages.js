@@ -1,16 +1,11 @@
-const getLanguages = ({country}) => {
-    let countryLanguages = country.languages
-    for (const lang in countryLanguages) {
-        return (
-            <li key={lang}>{countryLanguages[lang]}</li>
-        )
-    }
-}
-
 const Languages = ({country}) => {
+    const countryLanguages = country.languages;
+
     return (
         <ul>
-            {getLanguages({country})}
+            {Object.entries(countryLanguages).map(([lang, name]) => (
+                <li key={lang}>{name}</li>
+            ))}
         </ul>
     )
 }
