@@ -1,13 +1,7 @@
 import {useEffect, useState} from 'react'
 import axios from "axios";
+import CountryInfo from './components/CountryInfo'
 
-const CountryInfo = ({countries}) => {
-    return (
-        <>
-            Too many matches
-        </>
-    )
-}
 
 const App = () => {
     const [countries, setCountries] = useState([
