@@ -22,7 +22,6 @@ const App = () => {
 
     const [newName, setNewName] = useState('')
     const [newPhone, setNewPhone] = useState('')
-    const [newId, setNewId] = useState(persons.length + 1)
     const [newQuery, setNewQuery] = useState('')
 
     const addNewPerson = (event) => {
@@ -34,14 +33,12 @@ const App = () => {
             setPersons(persons.concat({
                 name: newName,
                 phone: newPhone,
-                id: newId
             }))
         } else {
             alert(`${newName} is already added to phonebook`)
         }
         setNewName('')
         setNewPhone('')
-        setNewId(newId + 1)
     }
 
     const handleNameChange = (event) => {
