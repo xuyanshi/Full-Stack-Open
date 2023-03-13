@@ -1,4 +1,4 @@
-const CountryInfo = ({countries}) => {
+const Countries = ({countries}) => {
     return (
         <>
             Too many matches
@@ -6,4 +6,4 @@ const CountryInfo = ({countries}) => {
     )
 }
 
-export default CountryInfo
+export default Countries

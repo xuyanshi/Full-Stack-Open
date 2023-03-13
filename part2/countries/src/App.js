@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
 import axios from "axios";
-import CountryInfo from './components/CountryInfo'
+import Countries from './components/Countries'
 
 
 const App = () => {
@@ -233,7 +233,7 @@ const App = () => {
             <form>
                 <div>find countries <input value={newQuery} onChange={handleQueryChange}/></div>
             </form>
-            <CountryInfo countries={countries}/>
+            <Countries countries={countries}/>
         </div>
     )
 }
