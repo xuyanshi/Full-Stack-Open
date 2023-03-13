@@ -234,7 +234,7 @@ const App = () => {
         <div>
             <form>
                 <div>
-                    find countries <input/>
+                    find countries <input value={newQuery} onChange={handleQueryChange}/>
                 </div>
             </form>
             ...
