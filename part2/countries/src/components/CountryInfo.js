@@ -1,17 +1,21 @@
 const CountryInfo = ({queryResult}) => {
     const country = queryResult[0]
 
-    let languages = []
+
     const getLanguages = () => {
         let countryLanguages = country.languages
+        let html = ""
         for (const lang in countryLanguages) {
-            languages = languages.concat(countryLanguages[lang])
+            html.concat(getLang(lang))
         }
+        console.log("html", html)
+        return html
     }
-    getLanguages()
-    
-    const getLang = () => {
 
+    const getLang = (language) => {
+        return (
+            <li>{language}</li>
+        )
     }
     return (
         <div>
@@ -20,9 +24,9 @@ const CountryInfo = ({queryResult}) => {
             <div>area {country.area}</div>
             <h3>languages: </h3>
             <ul>
-                <li></li>
+                {getLanguages()}
             </ul>
-            <img src={country.flags.png}/>
+            <img src={country.flags.png} alt={"flag of " + country.name.common}/>
         </div>
     )
 }
