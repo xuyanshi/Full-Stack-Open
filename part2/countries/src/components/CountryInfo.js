@@ -1,7 +1,6 @@
 import Languages from "./Languages";
 
-const CountryInfo = ({queryResult}) => {
-    const country = queryResult[0]
+const CountryInfo = ({country}) => {
     return (
         <div>
             <h2>{country.name.common}</h2>

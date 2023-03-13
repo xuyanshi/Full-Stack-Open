@@ -33,7 +33,7 @@ const Countries = ({countries, query}) => {
         )
     } else if (queryResult.length === 1) {
         return (
-            <CountryInfo queryResult={queryResult}/>
+            <CountryInfo country={queryResult[0]}/>
         )
     } else {
         return (
