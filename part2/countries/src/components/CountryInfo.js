@@ -9,6 +9,8 @@ const CountryInfo = ({country}) => {
             <h3>languages: </h3>
             <Languages country={country}/>
             <img src={country.flags.png} alt={"flag of " + country.name.common}/>
+            <h3>Weather in {country.capital}</h3>
+            
         </div>
     )
 }
