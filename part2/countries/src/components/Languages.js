@@ -2,7 +2,7 @@ const getLanguages = ({country}) => {
     let countryLanguages = country.languages
     for (const lang in countryLanguages) {
         return (
-            <li>{countryLanguages[lang]}</li>
+            <li key={lang}>{countryLanguages[lang]}</li>
         )
     }
 }
