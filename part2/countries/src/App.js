@@ -7,7 +7,7 @@ const App = () => {
     const [countries, setCountries] = useState([])
 
     useEffect(() => {
-        axios.get('https://restcountries.com/v3.1/all')
+        axios.get('../countries.json')
             .then(response => {
                 setCountries(response.data)
             })
