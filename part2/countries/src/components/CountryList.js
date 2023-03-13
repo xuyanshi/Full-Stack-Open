@@ -2,13 +2,16 @@ import CountryInfo from "./CountryInfo";
 
 const CountryList = ({queryResult}) => {
     return (
-        <div>
-            {queryResult.map((country) => {
-                return (
-                    <p>{country.name.common}</p>
-                )
-            })}
-        </div>
+        <>
+            <div>
+                {queryResult.map((country) => {
+                    return (
+                        <p>{country.name.common}</p>
+                    )
+                })}
+            </div>
+            <button onClick={}/>
+        </>
     )
 }
 
