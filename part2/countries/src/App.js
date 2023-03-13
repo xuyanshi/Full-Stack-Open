@@ -1,8 +1,12 @@
 import {useEffect, useState} from 'react'
 import axios from "axios";
 
-const Countries = () => {
-
+const CountryInfo = ({countries}) => {
+    return (
+        <>
+            Too many matches
+        </>
+    )
 }
 
 const App = () => {
@@ -233,11 +237,9 @@ const App = () => {
     return (
         <div>
             <form>
-                <div>
-                    find countries <input value={newQuery} onChange={handleQueryChange}/>
-                </div>
+                <div>find countries <input value={newQuery} onChange={handleQueryChange}/></div>
             </form>
-            ...
+            <CountryInfo countries={countries}/>
         </div>
     )
 }
