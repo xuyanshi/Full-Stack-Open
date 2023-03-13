@@ -3,6 +3,7 @@ import CountryList from "./CountryList";
 import CountryInfo from "./CountryInfo";
 
 const Countries = ({countries, query}) => {
+    console.log("countries.length", countries.length)
     const [queryResult, setQueryResult] = useState([])
 
     let resultCountries = []
@@ -17,6 +18,7 @@ const Countries = ({countries, query}) => {
         setQueryResult(resultCountries)
     }, [])
 
+    console.log("queryResult.length", queryResult.length)
     if (queryResult.length > 10) {
         return (
             <>
