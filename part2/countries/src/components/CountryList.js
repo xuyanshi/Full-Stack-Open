@@ -27,7 +27,7 @@ const CountryList = ({queryResult}) => {
             {!showInfo &&
                 <div>
                     <CountryInfo country={queryResult[0]}/>
-                    {setShowInfo(!showInfo)}
+                    {/*{setShowInfo(!showInfo)}*/}
                 </div>
             }
         </>
