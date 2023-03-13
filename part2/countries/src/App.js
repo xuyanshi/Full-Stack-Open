@@ -233,7 +233,7 @@ const App = () => {
             <form>
                 <div>find countries <input value={newQuery} onChange={handleQueryChange}/></div>
             </form>
-            <Countries countries={countries}/>
+            <Countries countries={countries} query={newQuery}/>
         </div>
     )
 }
