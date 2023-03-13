@@ -18,7 +18,7 @@ const Countries = ({countries, query}) => {
     console.log("resultCountries.length", resultCountries.length)
     useEffect(() => {
         setQueryResult(resultCountries)
-    }, [])
+    }, [query, countries])
 
     console.log("queryResult.length", queryResult.length)
     if (queryResult.length > 10) {
@@ -27,7 +27,7 @@ const Countries = ({countries, query}) => {
                 Too many matches
             </>
         )
-    } else if (queryResult.length > 1 && queryResult < 10) {
+    } else if (queryResult.length > 1 && queryResult.length < 10) {
         return (
             <CountryList queryResult={queryResult}/>
         )
