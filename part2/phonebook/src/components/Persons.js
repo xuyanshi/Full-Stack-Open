@@ -1,3 +1,5 @@
+import personService from "../services/person";
+
 const Person = ({person, query}) => {
     const personName = person.name.toLowerCase()
     query = query.toLowerCase()
@@ -8,7 +10,7 @@ const Person = ({person, query}) => {
                 <button onClick={() => {
                     const result = window.confirm(`Delete ${person.name}?`)
                     if (result) {
-                        // Delete
+                        personService.del(person.id)
                     }
                 }}>
                     delete
