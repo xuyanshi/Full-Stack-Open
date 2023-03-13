@@ -27,7 +27,7 @@ const Countries = ({countries, query}) => {
                 Too many matches
             </>
         )
-    } else if (queryResult.length > 1 && queryResult.length < 10) {
+    } else if (queryResult.length > 1 && queryResult.length <= 10) {
         return (
             <CountryList queryResult={queryResult}/>
         )

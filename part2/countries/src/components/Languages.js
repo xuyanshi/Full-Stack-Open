@@ -3,7 +3,7 @@ const Languages = ({country}) => {
 
     return (
         <ul>
-            {Object.entries(countryLanguages).map(([lang, name]) => (
+            {countryLanguages.map(([lang, name]) => (
                 <li key={lang}>{name}</li>
             ))}
         </ul>
