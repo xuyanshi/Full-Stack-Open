@@ -1,6 +1,6 @@
 import personService from "../services/person";
 
-const Person = ({person, query}) => {
+const Person = ({person, query, deletePerson}) => {
     const personName = person.name.toLowerCase()
     query = query.toLowerCase()
     if (query === '' || personName.indexOf(query) !== -1) {
@@ -20,11 +20,11 @@ const Person = ({person, query}) => {
     }
 }
 
-const Persons = ({persons, newQuery}) => {
+const Persons = ({persons, newQuery, deletePerson}) => {
     return (
         <div>
             {persons.map(person =>
-                <Person key={person.id} person={person} query={newQuery}/>
+                <Person key={person.id} person={person} query={newQuery} deletePerson={deletePerson}/>
             )}
         </div>
     )

@@ -1,5 +1,4 @@
 import {useState, useEffect} from 'react'
-import axios from "axios";
 import Filter from "./components/Filter";
 import Persons from "./components/Persons";
 import PersonForm from "./components/PersonForm";
@@ -40,6 +39,11 @@ const App = () => {
         setNewPhone('')
     }
 
+    const deletePerson = (event) => {
+        event.preventDefault()
+
+    }
+
     const handleNameChange = (event) => {
         setNewName(event.target.value)
     }
@@ -59,7 +63,7 @@ const App = () => {
             <PersonForm addNewPerson={addNewPerson} newName={newName} newPhone={newPhone}
                         handleNameChange={handleNameChange} handlePhoneChange={handlePhoneChange}/>
             <h3>Numbers</h3>
-            <Persons persons={persons} newQuery={newQuery}/>
+            <Persons persons={persons} newQuery={newQuery} deletePerson={deletePerson}/>
         </div>
     )
 }
