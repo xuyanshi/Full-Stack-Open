@@ -8,7 +8,7 @@ const Countries = ({countries, query}) => {
     let resultCountries = []
     for (let i = 0; i < countries.length; i++) {
         let country = countries[i]
-        let countryName = country.name.common
+        let countryName = country.name.common.toLowerCase()
         if (query === "" || countryName.indexOf(query) !== -1) {
             resultCountries = resultCountries.concat(country)
         }
