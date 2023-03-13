@@ -3,7 +3,17 @@ const Person = ({person, query}) => {
     query = query.toLowerCase()
     if (query === '' || personName.indexOf(query) !== -1) {
         return (
-            <div>{person.name} {person.phone}</div>
+            <div>
+                {person.name} {person.phone}
+                <button onClick={() => {
+                    const result = window.confirm(`Delete ${person.name}?`)
+                    if (result) {
+                        // Delete
+                    }
+                }}>
+                    delete
+                </button>
+            </div>
         )
     }
 }
