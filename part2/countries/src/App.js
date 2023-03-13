@@ -7,12 +7,18 @@ const App = () => {
     const [countries, setCountries] = useState([])
 
     useEffect(() => {
-        axios.get('../countries.json')
+        axios.get('http://localhost:3001/countries')
             .then(response => {
                 setCountries(response.data)
             })
     }, [])
 
+    // useEffect(() => {
+    //     axios.get('https://restcountries.com/v3.1/all')
+    //         .then(response => {
+    //             setCountries(response.data)
+    //         })
+    // }, [])
     const [newQuery, setNewQuery] = useState('')
 
     const handleQueryChange = (event) => {
