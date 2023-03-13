@@ -11,9 +11,11 @@ const Countries = ({countries, query}) => {
         let country = countries[i]
         let countryName = country.name.common.toLowerCase()
         if (query === "" || countryName.indexOf(query) !== -1) {
+            //setQueryResult(current => [...current,country])
             resultCountries = resultCountries.concat(country)
         }
     }
+    console.log("resultCountries.length", resultCountries.length)
     useEffect(() => {
         setQueryResult(resultCountries)
     }, [])
