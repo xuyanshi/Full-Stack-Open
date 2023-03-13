@@ -4,29 +4,32 @@ import countries from "./Countries";
 
 const CountryList = ({queryResult}) => {
     const [showInfo, setShowInfo] = useState(false)
+    const [selectedCountry, setSelectedCountry] = useState(null);
+    const handleButtonClick = (country) => {
+        setShowInfo(true)
+        setSelectedCountry(country)
+    }
 
     return (
         <>
-            {showInfo &&
+            {!showInfo &&
                 <div>
                     {queryResult.map((country) => {
                         return (
                             <div>
                                 {country.name.common}
                                 <button onClick={() => {
-                                    setShowInfo(!showInfo)
-                                    //How can I clear this page and generate a new html page?
-                                }}>
-                                    show
+                                    handleButtonClick(country)
+                                }}>show
                                 </button>
                             </div>
                         )
                     })}
                 </div>
             }
-            {!showInfo &&
+            {showInfo &&
                 <div>
-                    <CountryInfo country={queryResult[0]}/>
+                    <CountryInfo country={selectedCountry}/>
                     {/*{setShowInfo(!showInfo)}*/}
                 </div>
             }
