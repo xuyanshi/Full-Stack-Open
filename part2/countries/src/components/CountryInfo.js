@@ -25,7 +25,6 @@ const CountryInfo = ({country}) => {
     //             setWeather(response.data)
     //         })
     // }, [])
-
     return (
         <div>
             <h2>{country.name.common}</h2>
@@ -36,7 +35,7 @@ const CountryInfo = ({country}) => {
             <img src={country.flags.png} alt={"flag of " + country.name.common}/>
             <h3>Weather in {country.capital}</h3>
             <div>Temperature {(weather.main.temp - 273.15).toFixed(2)} Celsius</div>
-
+            <img src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={"weather icon"}/>
             <div>wind {weather.wind.speed.toFixed(2)} m/s</div>
         </div>
     )
