@@ -1,3 +1,5 @@
+import CountryInfo from "./CountryInfo";
+
 const CountryList = ({queryResult}) => {
     return (
         <div>
