@@ -3,11 +3,12 @@ const Languages = ({country}) => {
 
     return (
         <ul>
-            {countryLanguages.map(([lang, name]) => (
+            {Object.entries(countryLanguages).map(([lang, name]) => (
                 <li key={lang}>{name}</li>
             ))}
         </ul>
     )
 }
+
 
 export default Languages
