@@ -51,8 +51,11 @@ app.delete('/api/notes/:id', (request, response) => {
 })
 
 app.post('/api/notes', (request, response) => {
+    const maxId = 0
+
     const note = request.body
-    console.log(note)
+    note.id = 0
+    notes = notes.concat(note)
     response.json(note)
 })
 
