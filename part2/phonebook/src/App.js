@@ -3,6 +3,7 @@ import Filter from "./components/Filter";
 import Persons from "./components/Persons";
 import PersonForm from "./components/PersonForm";
 import personService from "./services/person";
+import person from "./services/person";
 
 const App = () => {
     const [persons, setPersons] = useState([])
@@ -43,11 +44,10 @@ const App = () => {
         const result = window.confirm(`Sure to DELETE this person?`)
         if (result) {
             personService.del(id)
+                .then(() => {
+                    setPersons(persons.filter(p => p.id !== id))
+                })
         }
-        personService.del(-1)
-            .then(response => {
-                setPersons(persons)
-            })
     }
 
     const handleNameChange = (event) => {
