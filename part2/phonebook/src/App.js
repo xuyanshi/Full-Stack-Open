@@ -44,7 +44,7 @@ const App = () => {
                 }, 5000)
             })
 
-        } else { // update
+        } else { // TODO: "update" needs to be fixed
             const result = window.confirm(`Sure to Update this person?`)
             if (result) {
                 const updatingPerson = {...persons[findIdx], phone: newPhone}
