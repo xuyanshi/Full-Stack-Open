@@ -27,27 +27,31 @@ let persons = [
     }
 ]
 
-app.get('/',(request,response) => {
+app.get('/', (request, response) => {
     response.send('<h1>Home Page</h1>')
 })
 
-app.get('/api/persons',(req,res) => {
+app.get('/api/persons', (req, res) => {
     res.json(persons)
 })
 
-app.get('/info',(req,res) => {
+app.get('/info', (req, res) => {
     res.send(`<div>Phonebook has info for ${persons.length} people<div>   
     <div>${new Date().toDateString()} ${new Date().toTimeString()}</div>`)
 })
 
-app.get('/api/persons/:id',(req,res) => {
+app.get('/api/persons/:id', (req, res) => {
     const id = Number(req.params.id)
-    const person = persons.find(p => p.id===id)
+    const person = persons.find(p => p.id === id)
     if (person) {
         res.json(person)
     } else {
         res.status(404).end()
     }
+})
+
+app.delete('/api/persons:id', (req, res) => {
+    
 })
 
 const PORT = 3001
