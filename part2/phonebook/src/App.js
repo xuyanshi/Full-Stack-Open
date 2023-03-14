@@ -50,7 +50,12 @@ const App = () => {
                 personService.del(persons[findIdx].id)
                     .then(response => {
                         setPersons(persons.filter(p => p.id !== persons[findIdx].id))
-                    })
+                    }).catch(error => {
+                    setErrorMessage(`${newName} has already been removed`)
+                    setTimeout(() => {
+                        setErrorMessage(null)
+                    }, 5000)
+                })
 
                 const personObject = {
                     name: newName,
