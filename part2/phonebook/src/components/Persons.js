@@ -7,7 +7,7 @@ const Person = ({person, query, handleDelete}) => {
         return (
             <div>
                 {person.name} {person.phone}
-                <button onClick={handleDelete(person.id)}>
+                <button onClick={handleDelete}>
                     delete
                 </button>
             </div>
