@@ -15,7 +15,7 @@ const update = (id, newObject) => {
 }
 
 const del = (id) => {
-
+    return axios.delete(`${baseUrl}/${id}`)
 }
 
 export default {getAll, create, update, del}

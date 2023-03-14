@@ -41,7 +41,10 @@ const App = () => {
 
     const deletePerson = (event) => {
         event.preventDefault()
-
+        personService.del(-1)
+            .then(response => {
+                setPersons(persons)
+            })
     }
 
     const handleNameChange = (event) => {
