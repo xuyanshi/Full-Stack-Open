@@ -55,6 +55,12 @@ const generateId = () => {
     return Math.floor(Math.random() * Number.MAX_SAFE_INTEGER)
 }
 
+app.post('/api/persons', (req, res) => {
+    const body = req.body
+    
+
+})
+
 app.delete('/api/persons:id', (req, res) => {
     const id = Number(req.params.id)
     persons = persons.filter(p => p.id !== id)
