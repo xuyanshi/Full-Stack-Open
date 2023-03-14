@@ -69,6 +69,7 @@ const App = () => {
     return (
         <div>
             <h2>Phonebook</h2>
+            <Notification message={errorMessage}/>
             <Filter newQuery={newQuery} handleQueryChange={handleQueryChange}/>
             <h3>Add a new</h3>
             <PersonForm addNewPerson={addNewPerson} newName={newName} newPhone={newPhone}
