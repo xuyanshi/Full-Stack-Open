@@ -19,7 +19,7 @@ const App = () => {
     const [newQuery, setNewQuery] = useState('')
     const [errorMessage, setErrorMessage] = useState(null)
     const [successMessage, setSuccessMessage] = useState(null)
-
+    const [alreadyRemoved, setAlreadyRemoved] = useState(false)
     const addNewPerson = (event) => {
         event.preventDefault()
         let findIdx = persons.findIndex((p) => {
@@ -47,37 +47,37 @@ const App = () => {
         } else { // update
             const result = window.confirm(`Sure to Update this person?`)
             if (result) {
-                personService.del(persons[findIdx].id)
-                    .then(response => {
-                        setPersons(persons.filter(p => p.id !== persons[findIdx].id))
+                const updatingPerson = {...persons[findIdx], phone: newPhone}
+                personService.del(updatingPerson.id)
+                    .then(() => {
+                        setPersons(persons.filter(p => p.id !== updatingPerson.id))
                     }).catch(error => {
-                    setErrorMessage(`${newName} has already been removed`)
+                    setErrorMessage(`${newName} has already been removed before`)
+                    setAlreadyRemoved(true)
                     setTimeout(() => {
                         setErrorMessage(null)
                     }, 5000)
                 })
-
-                const personObject = {
-                    name: newName,
-                    phone: newPhone,
-                }
-                personService.create(personObject)
-                    .then(response => {
-                        setSuccessMessage(`Updated ${newName}`)
+                if (!alreadyRemoved) {
+                    personService.create(updatingPerson)
+                        .then(response => {
+                            setSuccessMessage(`Updated ${newName}`)
+                            setTimeout(() => {
+                                setSuccessMessage(null)
+                            }, 5000)
+                            setPersons(persons.concat(response.data))
+                        }).catch(error => {
+                        setErrorMessage(`Fail to update ${newName}`)
                         setTimeout(() => {
-                            setSuccessMessage(null)
+                            setErrorMessage(null)
                         }, 5000)
-                        setPersons(persons.concat(response.data))
-                    }).catch(error => {
-                    setErrorMessage(`Fail to update ${newName}`)
-                    setTimeout(() => {
-                        setErrorMessage(null)
-                    }, 5000)
-                })
+                    })
+                }
             }
         }
         setNewName('')
         setNewPhone('')
+        setAlreadyRemoved(false)
     }
 
     const handleDelete = (id) => {
