@@ -17,8 +17,8 @@ const App = () => {
     const [newName, setNewName] = useState('')
     const [newPhone, setNewPhone] = useState('')
     const [newQuery, setNewQuery] = useState('')
-    const [errorMessage, setErrorMessage] = useState('this is an error message')
-    const [successMessage, setSuccessMessage] = useState('this is an success message')
+    const [errorMessage, setErrorMessage] = useState(null)
+    const [successMessage, setSuccessMessage] = useState(null)
 
     const addNewPerson = (event) => {
         event.preventDefault()
@@ -56,10 +56,17 @@ const App = () => {
         if (result) {
             personService.del(id)
                 .then(response => {
+                    setSuccessMessage(`Deleted ${newName}`)
+                    setTimeout(() => {
+                        setSuccessMessage(null)
+                    }, 5000)
                     setPersons(persons.filter(p => p.id !== id))
                 })
                 .catch(error => {
-                    console.log('Error! ', error.response.data.error)
+                    setErrorMessage(`Fail to delete ${newName}`)
+                    setTimeout(() => {
+                        setErrorMessage(null)
+                    }, 5000)
                 })
         }
     }
