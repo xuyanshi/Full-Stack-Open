@@ -17,8 +17,8 @@ const App = () => {
     const [newName, setNewName] = useState('')
     const [newPhone, setNewPhone] = useState('')
     const [newQuery, setNewQuery] = useState('')
-    const [errorMessage, setErrorMessage] = useState('')
-    const [successMessage, setSuccessMessage] = useState('')
+    const [errorMessage, setErrorMessage] = useState('this is an error message')
+    const [successMessage, setSuccessMessage] = useState('this is an success message')
 
     const addNewPerson = (event) => {
         event.preventDefault()
