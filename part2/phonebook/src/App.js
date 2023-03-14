@@ -40,9 +40,9 @@ const App = () => {
     }
 
     const handleDelete = (id) => {
-        const result = window.confirm(`Delete ${person.name}?`)
+        const result = window.confirm(`Sure to DELETE this person?`)
         if (result) {
-            personService.del(person.id)
+            personService.del(id)
         }
         personService.del(-1)
             .then(response => {
