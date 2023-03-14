@@ -1,18 +1,13 @@
 import personService from "../services/person";
 
-const Person = ({person, query, deletePerson}) => {
+const Person = ({person, query, handleDelete}) => {
     const personName = person.name.toLowerCase()
     query = query.toLowerCase()
     if (query === '' || personName.indexOf(query) !== -1) {
         return (
             <div>
                 {person.name} {person.phone}
-                <button onClick={() => {
-                    const result = window.confirm(`Delete ${person.name}?`)
-                    if (result) {
-                        personService.del(person.id)
-                    }
-                }}>
+                <button onClick={handleDelete}>
                     delete
                 </button>
             </div>

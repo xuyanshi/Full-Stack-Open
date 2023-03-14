@@ -39,8 +39,11 @@ const App = () => {
         setNewPhone('')
     }
 
-    const deletePerson = (event) => {
-        event.preventDefault()
+    const handleDelete = (id) => {
+        const result = window.confirm(`Delete ${person.name}?`)
+        if (result) {
+            personService.del(person.id)
+        }
         personService.del(-1)
             .then(response => {
                 setPersons(persons)
@@ -66,7 +69,7 @@ const App = () => {
             <PersonForm addNewPerson={addNewPerson} newName={newName} newPhone={newPhone}
                         handleNameChange={handleNameChange} handlePhoneChange={handlePhoneChange}/>
             <h3>Numbers</h3>
-            <Persons persons={persons} newQuery={newQuery} deletePerson={deletePerson}/>
+            <Persons persons={persons} newQuery={newQuery} handleDelete={handleDelete}/>
         </div>
     )
 }
