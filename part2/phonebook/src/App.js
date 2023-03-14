@@ -25,7 +25,7 @@ const App = () => {
         let findIdx = persons.findIndex((p) => {
             return newName === p.name
         })
-        if (findIdx === -1) {
+        if (findIdx === -1) { // add
             const personObject = {
                 name: newName,
                 phone: newPhone,
@@ -44,8 +44,32 @@ const App = () => {
                 }, 5000)
             })
 
-        } else {
-            alert(`${newName} is already added to phonebook`)
+        } else { // update
+            const result = window.confirm(`Sure to Update this person?`)
+            if (result) {
+                personService.del(persons[findIdx].id)
+                    .then(response => {
+                        setPersons(persons.filter(p => p.id !== persons[findIdx].id))
+                    })
+
+                const personObject = {
+                    name: newName,
+                    phone: newPhone,
+                }
+                personService.create(personObject)
+                    .then(response => {
+                        setSuccessMessage(`Updated ${newName}`)
+                        setTimeout(() => {
+                            setSuccessMessage(null)
+                        }, 5000)
+                        setPersons(persons.concat(response.data))
+                    }).catch(error => {
+                    setErrorMessage(`Fail to update ${newName}`)
+                    setTimeout(() => {
+                        setErrorMessage(null)
+                    }, 5000)
+                })
+            }
         }
         setNewName('')
         setNewPhone('')
