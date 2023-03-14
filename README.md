@@ -8,7 +8,7 @@ Full Stack Web Development, University of Helsinki
 ## Parts (Completion Date)
 - [x] Part 0: Fundamentals of Web apps (2023-03-11)
 - [x] Part 1: Introduction to React (2023-03-11)
-- [ ] Part 2: Communicating with server
+- [x] Part 2: Communicating with server (2023-03-14)
 - [ ] Part 3: Programming a server with NodeJS and Express
 - [ ] Part 4: Testing Express servers, user administration
 - [ ] Part 5: Testing React apps
