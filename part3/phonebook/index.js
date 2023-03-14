@@ -28,8 +28,13 @@ let persons = [
 ]
 
 app.get('/',(request,response) => {
-    request.send('<h1>Home Page</h1>>')
+    response.send('<h1>Home Page</h1>')
 })
+
+app.get('/api/persons',(req,res) => {
+    res.json(persons)
+})
+
 
 const PORT = 3001
 app.listen(PORT, () => {
