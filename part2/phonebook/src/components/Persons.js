@@ -1,5 +1,3 @@
-import personService from "../services/person";
-
 const Person = ({person, query, handleDelete}) => {
     const personName = person.name.toLowerCase()
     query = query.toLowerCase()
