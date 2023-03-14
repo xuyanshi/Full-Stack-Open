@@ -32,8 +32,17 @@ const App = () => {
             }
             personService.create(personObject)
                 .then(response => {
+                    setSuccessMessage(`Added ${newName}`)
+                    setTimeout(() => {
+                        setSuccessMessage(null)
+                    }, 5000)
                     setPersons(persons.concat(response.data))
-                })
+                }).catch(error => {
+                setErrorMessage(`Fail to add ${newName}`)
+                setTimeout(() => {
+                    setErrorMessage(null)
+                }, 5000)
+            })
 
         } else {
             alert(`${newName} is already added to phonebook`)
@@ -69,7 +78,7 @@ const App = () => {
     return (
         <div>
             <h2>Phonebook</h2>
-            <Notification message={errorMessage}/>
+            <Notification errorMessage={errorMessage} successMessage={successMessage}/>
             <Filter newQuery={newQuery} handleQueryChange={handleQueryChange}/>
             <h3>Add a new</h3>
             <PersonForm addNewPerson={addNewPerson} newName={newName} newPhone={newPhone}
