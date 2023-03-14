@@ -48,9 +48,12 @@ const App = () => {
             const result = window.confirm(`Sure to Update this person?`)
             if (result) {
                 const updatingPerson = {...persons[findIdx], phone: newPhone}
-                personService.del(updatingPerson.id)
-                    .then(() => {
-                        setPersons(persons.filter(p => p.id !== updatingPerson.id))
+                personService.update(updatingPerson.id, updatingPerson)
+                    .then(response => {
+                        setSuccessMessage(`Updated ${newName}`)
+                        setTimeout(() => {
+                            setSuccessMessage(null)
+                        }, 5000)
                     }).catch(error => {
                     setErrorMessage(`${newName} has already been removed before`)
                     setAlreadyRemoved(true)
@@ -58,21 +61,6 @@ const App = () => {
                         setErrorMessage(null)
                     }, 5000)
                 })
-                if (!alreadyRemoved) {
-                    personService.create(updatingPerson)
-                        .then(response => {
-                            setSuccessMessage(`Updated ${newName}`)
-                            setTimeout(() => {
-                                setSuccessMessage(null)
-                            }, 5000)
-                            setPersons(persons.concat(response.data))
-                        }).catch(error => {
-                        setErrorMessage(`Fail to update ${newName}`)
-                        setTimeout(() => {
-                            setErrorMessage(null)
-                        }, 5000)
-                    })
-                }
             }
         }
         setNewName('')
