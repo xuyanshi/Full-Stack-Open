@@ -56,12 +56,11 @@ const generateId = () => {
 
 app.post('/api/persons', (req, res) => {
     const body = req.body
-    if (!body.content) {
+    if (!body.name) {
         return res.status(400).json({
             error: 'content missing'
         })
     }
-
     const person = {
         id: generateId(),
         name: body.name,
