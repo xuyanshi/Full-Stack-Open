@@ -15,11 +15,11 @@ const Person = ({person, query, handleDelete}) => {
     }
 }
 
-const Persons = ({persons, newQuery, deletePerson}) => {
+const Persons = ({persons, newQuery, handleDelete}) => {
     return (
         <div>
             {persons.map(person =>
-                <Person key={person.id} person={person} query={newQuery} deletePerson={deletePerson}/>
+                <Person key={person.id} person={person} query={newQuery} handleDelete={handleDelete}/>
             )}
         </div>
     )

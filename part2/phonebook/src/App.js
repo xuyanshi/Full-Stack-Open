@@ -43,8 +43,11 @@ const App = () => {
         const result = window.confirm(`Sure to DELETE this person?`)
         if (result) {
             personService.del(id)
-                .then(() => {
+                .then(response => {
                     setPersons(persons.filter(p => p.id !== id))
+                })
+                .catch(error => {
+                    console.log('Error! ', error.response.data.error)
                 })
         }
     }
