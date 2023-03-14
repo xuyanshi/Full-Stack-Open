@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react'
 import Filter from "./components/Filter";
 import Persons from "./components/Persons";
 import PersonForm from "./components/PersonForm";
+import Notification from "./components/Notification";
 import personService from "./services/person";
 
 const App = () => {
