@@ -48,7 +48,12 @@ app.get('/api/persons/:id', (req, res) => {
     } else {
         res.status(404).end()
     }
+    res.json(person)
 })
+
+const generateId = () => {
+    return Math.floor(Math.random() * Number.MAX_SAFE_INTEGER)
+}
 
 app.delete('/api/persons:id', (req, res) => {
     const id = Number(req.params.id)
@@ -56,9 +61,6 @@ app.delete('/api/persons:id', (req, res) => {
     res.status(204).end()
 })
 
-const generateId = () => {
-    Math.floor(Math.random() * Number.MAX_SAFE_INTEGER)
-}
 
 const PORT = 3001
 app.listen(PORT, () => {
