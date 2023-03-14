@@ -1,4 +1,5 @@
 const express = require('express')
+const {response} = require("express");
 const app = express()
 
 app.use(express.json())
@@ -25,3 +26,7 @@ let persons = [
         "number": "39-23-6423122"
     }
 ]
+
+app.get('/',(request,response) => {
+    request.send('<h1>Home Page</h1>>')
+})
