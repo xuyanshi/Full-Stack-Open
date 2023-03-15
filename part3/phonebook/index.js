@@ -1,10 +1,8 @@
+require('dotenv').config()
 const express = require('express')
 const morgan = require('morgan')
 const mongoose = require('mongoose')
 const Person = require('./models/person')
-const password = 'Xys_991022'
-const url =
-    `mongodb+srv://xuyanshi1999:${password}@cluster-test.psvw21y.mongodb.net/personApp?retryWrites=true&w=majority`
 
 
 const app = express()
@@ -98,7 +96,7 @@ app.delete('/api/persons:id', (req, res) => {
 })
 
 
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`)
 })
