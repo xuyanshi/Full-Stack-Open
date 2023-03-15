@@ -12,7 +12,7 @@ const password = process.argv[2]
 
 const url =
     // `mongodb+srv://fullstack:${password}@cluster0.o1opl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
-    `mongodb+srv://xuyanshi1999:${password}@cluster-test.psvw21y.mongodb.net/?retryWrites=true&w=majority`
+    `mongodb+srv://xuyanshi1999:${password}@cluster-test.psvw21y.mongodb.net/noteApp?retryWrites=true&w=majority`
 
 mongoose.connect(url)
 
@@ -24,13 +24,21 @@ const noteSchema = new mongoose.Schema({
 
 const Note = mongoose.model('Note', noteSchema)
 
-const note = new Note({
-    content: 'HTML is Easy',
-    date: new Date(),
-    important: true,
-})
+// Add new data to the mongo database
 
-note.save().then(result => {
-    console.log('note saved!')
+// const note = new Note({
+//     content: 'HTML is Easy',
+//     date: new Date(),
+//     important: true,
+// })
+//
+// note.save().then(result => {
+//     console.log('note saved!')
+//     mongoose.connection.close()
+// })
+
+// Fetch data from the mongo database
+
+Note.find({}).then(result => {
     mongoose.connection.close()
 })
