@@ -5,13 +5,17 @@ const {STATES} = require("mongoose");
 
 const password = 'Xys_991022'
 const url =
-    `mongodb+srv://xuyanshi1999:${password}@cluster-test.psvw21y.mongodb.net/phonebookApp?retryWrites=true&w=majority`
+    `mongodb+srv://xuyanshi1999:${password}@cluster-test.psvw21y.mongodb.net/personApp?retryWrites=true&w=majority`
 mongoose.connect(url)
 
 const app = express()
 
 app.use(express.json())
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms  :data'))
+
+morgan.token('data', (req, res, param) => {
+    return JSON.stringify(req.body)
+})
 
 const personSchema = new mongoose.Schema({
     name: String,
@@ -20,9 +24,6 @@ const personSchema = new mongoose.Schema({
 
 const Person = mongoose.model('Person', personSchema)
 
-morgan.token('data', (req, res, param) => {
-    return JSON.stringify(req.body)
-})
 
 let persons = [
     {
@@ -47,12 +48,15 @@ let persons = [
     }
 ]
 
+
 app.get('/', (request, response) => {
     response.send('<h1>Home Page</h1>')
 })
 
 app.get('/api/persons', (req, res) => {
-    res.json(persons)
+    Person.find({}).then(p => {
+        res.json(persons)
+    })
 })
 
 app.get('/info', (req, res) => {
