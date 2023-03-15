@@ -80,7 +80,6 @@ app.post('/api/persons', (req, res) => {
     }
 
     persons = persons.concat(person)
-    res.json(person)
 })
 
 app.delete('/api/persons:id', (req, res) => {
