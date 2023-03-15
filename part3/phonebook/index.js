@@ -5,7 +5,7 @@ const mongoose = require('mongoose')
 const password = 'Xys_991022'
 const url =
     `mongodb+srv://xuyanshi1999:${password}@cluster-test.psvw21y.mongodb.net/personApp?retryWrites=true&w=majority`
-mongoose.connect(url)
+
 
 const app = express()
 
