@@ -1,5 +1,11 @@
 # Full-Stack-Open-Part3
+<!--
 Part3 is [here](https://github.com/xuyanshi/Full-Stack-Open-Part3).
+-->
+
+Full Stack Web Development Part 3, University of Helsinki
+
+Heroku is not free now (and I have no credit card), so I decide to not to deploy this project on it.
 
 ---
 
