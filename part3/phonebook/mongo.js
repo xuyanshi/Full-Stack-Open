@@ -16,5 +16,29 @@ mongoose.connect(url)
 
 const phonebookSchema = new mongoose.Schema({
     name: String,
-    
+    number: Number
 })
+
+const Phonebook = mongoose.model('Phonebook', phonebookSchema)
+
+const createPerson = () => {
+    const newPerson = new Phonebook({
+        name: newName,
+        number: newNumber
+    })
+
+    newPerson.save().then(result => {
+        console.log('this person saved!')
+        mongoose.connection.close()
+    })
+}
+
+const fetchPerson = () => {
+    Phonebook.find({}).then(result => {
+        result.forEach(person => {
+            console.log(person)
+        })
+        mongoose.connection.close()
+    })
+}
+

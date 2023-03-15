@@ -21,7 +21,6 @@ const noteSchema = new mongoose.Schema({
     date: Date,
     important: Boolean,
 })
-
 const Note = mongoose.model('Note', noteSchema)
 
 // Add new data to the mongo database
