@@ -1,7 +1,7 @@
 const express = require('express')
 const morgan = require('morgan')
 const mongoose = require('mongoose')
-
+const Person = require('./models/person')
 const password = 'Xys_991022'
 const url =
     `mongodb+srv://xuyanshi1999:${password}@cluster-test.psvw21y.mongodb.net/personApp?retryWrites=true&w=majority`
@@ -15,13 +15,6 @@ app.use(morgan(':method :url :status :res[content-length] - :response-time ms  :
 morgan.token('data', (req, res, param) => {
     return JSON.stringify(req.body)
 })
-
-const personSchema = new mongoose.Schema({
-    name: String,
-    number: String
-})
-
-const Person = mongoose.model('Person', personSchema)
 
 
 let persons = [
