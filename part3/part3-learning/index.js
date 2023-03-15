@@ -26,6 +26,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/api/notes', (req, res) => {
+  // could be fixed
   res.json(notes)
 })
 
