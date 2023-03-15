@@ -7,6 +7,7 @@ if (process.argv.length < 3) {
     process.exit(1)
 }
 
+// node mongo.js <password>
 const password = process.argv[2]
 
 const url =
