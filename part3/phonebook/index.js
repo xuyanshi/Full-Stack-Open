@@ -1,7 +1,6 @@
 const express = require('express')
 const morgan = require('morgan')
 const mongoose = require('mongoose')
-const {STATES} = require("mongoose");
 
 const password = 'Xys_991022'
 const url =
