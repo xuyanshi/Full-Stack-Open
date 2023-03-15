@@ -1,12 +1,11 @@
 const express = require('express')
-const app = express()
-
 const morgan = require('morgan')
+const app = express()
 
 app.use(express.json())
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms  :data'))
 
-morgan.token('data', (req) => {
+morgan.token('data', (req, res, param) => {
     return JSON.stringify(req.body)
 })
 
@@ -54,7 +53,6 @@ app.get('/api/persons/:id', (req, res) => {
     } else {
         res.status(404).end()
     }
-    res.json(person)
 })
 
 const generateId = () => {
