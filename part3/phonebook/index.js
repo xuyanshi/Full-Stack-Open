@@ -14,30 +14,31 @@ morgan.token('data', (req, res, param) => {
     return JSON.stringify(req.body)
 })
 
+//
+// let persons = [
+//     {
+//         "id": 1,
+//         "name": "Arto Hellas",
+//         "number": "040-123456"
+//     },
+//     {
+//         "id": 2,
+//         "name": "Ada Lovelace",
+//         "number": "39-44-5323523"
+//     },
+//     {
+//         "id": 3,
+//         "name": "Dan Abramov",
+//         "number": "12-43-234345"
+//     },
+//     {
+//         "id": 4,
+//         "name": "Mary Poppendieck",
+//         "number": "39-23-6423122"
+//     }
+// ]
 
-let persons = [
-    {
-        "id": 1,
-        "name": "Arto Hellas",
-        "number": "040-123456"
-    },
-    {
-        "id": 2,
-        "name": "Ada Lovelace",
-        "number": "39-44-5323523"
-    },
-    {
-        "id": 3,
-        "name": "Dan Abramov",
-        "number": "12-43-234345"
-    },
-    {
-        "id": 4,
-        "name": "Mary Poppendieck",
-        "number": "39-23-6423122"
-    }
-]
-
+let persons = []
 
 app.get('/', (request, response) => {
     response.send('<h1>Home Page</h1>')
@@ -70,7 +71,7 @@ const generateId = () => {
 
 app.post('/api/persons', (req, res) => {
     const body = req.body
-    if (body.name == null || body.number == null) {
+    if (body.name === undefined || body.number === undefined) {
         return res.status(400).json({
             error: 'name or number missing'
         })
@@ -80,13 +81,15 @@ app.post('/api/persons', (req, res) => {
             error: 'name must be unique'
         })
     }
-    const person = {
-        id: generateId(),
+    const person = new Person({
+        // id: generateId(),
         name: body.name,
         number: body.number,
-    }
+    })
 
-    persons = persons.concat(person)
+    person.save().then(savedPerson => {
+        res.json(savedPerson)
+    })
 })
 
 app.delete('/api/persons:id', (req, res) => {
@@ -95,6 +98,7 @@ app.delete('/api/persons:id', (req, res) => {
     res.status(204).end()
 })
 
+// app.use(unknownEndPoint)
 
 const PORT = process.env.PORT
 app.listen(PORT, () => {
