@@ -5,3 +5,11 @@ if (process.argv.length < 5) {
     process.exit(1)
 }
 
+const password = process.argv[2]
+
+const url =
+    `mongodb+srv://xuyanshi1999:${password}@cluster-test.psvw21y.mongodb.net/phonebookApp?retryWrites=true&w=majority`
+
+mongoose.connect(url)
+
+
