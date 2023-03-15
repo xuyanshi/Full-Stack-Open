@@ -1,16 +1,20 @@
 const mongoose = require('mongoose')
 const argvLen = process.argv.length
+const password = process.argv[2]
 
 if (argvLen < 3) {
-    console.log('Please provide the password as an argument: node mongo.js <password> <name> <phone-number>')
+    console.log('Please provide accurate arguments: node mongo.js <password> (<name> <phone-number>)')
     process.exit(1)
-} else if (argvLen > 5) {
-
 } else if (argvLen === 3) {
 
+} else if (argvLen === 5) {
+
+} else {
+    console.log('Please provide the password as an argument: node mongo.js <password> <name> <phone-number>')
+    process.exit(1)
 }
 
-const password = process.argv[2]
+
 const newName = process.argv[3]
 const newNumber = process.argv[4]
 
