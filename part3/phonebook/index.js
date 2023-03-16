@@ -105,7 +105,7 @@ app.post('/api/persons', (req, res) => {
     })
 })
 
-app.delete('/api/persons:id', (req, res, next) => {
+app.delete('/api/persons/:id', (req, res, next) => {
     // id is not a number now!!!!
     // const id = Number(req.params.id)
     Person.findByIdAndRemove(req.params.id)
