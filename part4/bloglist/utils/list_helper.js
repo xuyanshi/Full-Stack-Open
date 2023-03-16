@@ -34,6 +34,18 @@ const mostBlogs = (blogs) => {
         }
         hashTable[blog.author] += 1
     }
+    let mostBlogsAuthor = ''
+    let mostBlogsAmount = -1
+    for (const author in hashTable) {
+        if (hashTable[author] > mostBlogsAmount) {
+            mostBlogsAuthor = author
+            mostBlogsAmount = hashTable[author]
+        }
+    }
+    return {
+        author: mostBlogsAuthor,
+        blogs: mostBlogsAmount
+    }
 }
 
 const mostLikes = (blogs) => {
