@@ -10,5 +10,15 @@ blogsRouter.get('/', (req, res) => {
 
 // get one blog
 blogsRouter.get('/:id', (req, res, next) => {
-    Blog.findById
+    Blog.findById(req.params.id)
+        .then(b => {
+            if (b) {
+                res.json(b)
+            } else {
+                res.status(404).end()
+            }
+        })
+        .catch(err => next(err))
 })
+
+// create a new blog
