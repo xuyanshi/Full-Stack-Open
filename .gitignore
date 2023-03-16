@@ -10,3 +10,5 @@ part4/bloglist/.env
 */.env
 *\.env
 part4/bloglist/.env
+part4/bloglist/.idea/workspace.xml
+*.xml
