@@ -59,7 +59,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Jest.dummy returns one">
+  <component name="RunManager" selected="Jest.favorite blog">
     <configuration name="dummy returns one" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -70,6 +70,19 @@
       <test-file value="$PROJECT_DIR$/tests/list_helper.test.js" />
       <test-names>
         <test-name value="dummy returns one" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="favorite blog" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/tests/list_helper.test.js" />
+      <test-names>
+        <test-name value="favorite blog" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -100,16 +113,6 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="lint" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -123,10 +126,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.test" />
+        <item itemvalue="Jest.favorite blog" />
         <item itemvalue="Jest.dummy returns one" />
         <item itemvalue="Jest.total likes" />
         <item itemvalue="Jest.total likes.total likes of these 5 blogs" />
-        <item itemvalue="npm.lint" />
       </list>
     </recent_temporary>
   </component>
@@ -141,7 +144,7 @@
       <workItem from="1678946422429" duration="403000" />
       <workItem from="1678948888020" duration="1341000" />
       <workItem from="1678950862801" duration="5775000" />
-      <workItem from="1678964560464" duration="5876000" />
+      <workItem from="1678964560464" duration="6856000" />
     </task>
     <servers />
   </component>

@@ -15,10 +15,19 @@ const totalLikes = (blogs) => {
 
 const favoriteBlog = (blogs) => {
     let favoriteIdx = -1
-    let daisukiBlog = undefined
+    let maxLikes = -1
+    for (let i = 0; i < blogs.length; i++) {
+        const blog = blogs[i]
+        if (blog.likes > maxLikes) {
+            maxLikes = blog.likes
+            favoriteIdx = i
+        }
+    }
+    return maxLikes === -1 ? undefined : blogs[favoriteIdx]
 }
 
 module.exports = {
     dummy,
-    totalLikes
+    totalLikes,
+    favoriteBlog,
 }
