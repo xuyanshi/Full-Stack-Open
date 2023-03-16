@@ -29,7 +29,10 @@ const favoriteBlog = (blogs) => {
 const mostBlogs = (blogs) => {
     let hashTable = {}
     for (const blog of blogs) {
-        
+        if (!hashTable.hasOwnProperty(blog.author)) {
+            hashTable[blog.author] = 0
+        }
+        hashTable[blog.author] += 1
     }
 }
 
