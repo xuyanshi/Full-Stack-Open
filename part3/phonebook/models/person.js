@@ -9,6 +9,10 @@ mongoose.connect(url)
     console.log('error connecting to MongoDB', err.message)
 })
 
+const validator = (val) => {
+    return /\d{2,3}-\d{5,}/.test(val)
+}
+
 const personSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -17,6 +21,8 @@ const personSchema = new mongoose.Schema({
     },
     number: {
         type: String,
+        minLength: 8,
+        validate: validator,
         required: true
     }
 })
