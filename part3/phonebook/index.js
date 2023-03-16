@@ -40,6 +40,13 @@ morgan.token('data', (req, res, param) => {
 
 let persons = []
 
+const errorHandler = (err, req, res, next) => {
+    console.error(err.message)
+    if (err.name === 'CastError') {
+        return res.status(400).send({error: 'malformed id'})
+    }
+}
+
 app.get('/', (request, response) => {
     response.send('<h1>Home Page</h1>')
 })
