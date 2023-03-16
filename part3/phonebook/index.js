@@ -67,10 +67,15 @@ app.get('/info', (req, res) => {
     <div>${new Date().toDateString()} ${new Date().toTimeString()}</div>`)
 })
 
-app.get('/api/persons/:id', (req, res) => {
-    Person.findById(req.params.id).then(p => {
-        res.json(p)
-    })
+app.get('/api/persons/:id', (req, res, next) => {
+    Person.findById(req.params.id)
+        .then(p => {
+            if (p) {
+                res.json(p)
+            } else {
+                res.status(404).end()
+            }
+        }).catch(err => next(err))
 })
 
 const generateId = () => {
@@ -100,13 +105,20 @@ app.post('/api/persons', (req, res) => {
     })
 })
 
-app.delete('/api/persons:id', (req, res) => {
-    const id = Number(req.params.id)
-    persons = persons.filter(p => p.id !== id)
-    res.status(204).end()
+app.delete('/api/persons:id', (req, res, next) => {
+    // id is not a number now!!!!
+    // const id = Number(req.params.id)
+    Person.findByIdAndRemove(req.params.id)
+        .then(result => {
+            res.status(204).end()
+        })
+        .catch(err => next(err))
+    // persons = persons.filter(p => p.id !== id)
+    // res.status(204).end()
 })
 
-// app.use(unknownEndPoint)
+app.use(unknownEndpoint)
+app.use(errorHandler)
 
 const PORT = process.env.PORT
 app.listen(PORT, () => {
