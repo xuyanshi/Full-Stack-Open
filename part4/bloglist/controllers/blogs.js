@@ -50,3 +50,15 @@ blogsRouter.delete('/:id', (req, res, next) => {
 })
 
 // update one blog
+blogsRouter.put('/:id', (req, res, next) => {
+    const body = req.body
+
+    const blog = {
+        title: body.title,
+        author: body.author,
+        url: body.url,
+        likes: body.likes,
+    }
+
+})
+
