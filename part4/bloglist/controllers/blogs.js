@@ -40,4 +40,11 @@ blogsRouter.post('/', (req, res, next) => {
         .catch(err => next(err))
 })
 
-blogsRouter.delete
+// delete one blog
+blogsRouter.delete('/:id', (req, res, next) => {
+    Blog.findByIdAndRemove(req.params.id)
+        .then(() => {
+            res.status(204).end()
+        })
+        .catch(err => next(err))
+})
