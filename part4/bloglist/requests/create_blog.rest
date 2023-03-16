@@ -2,6 +2,8 @@ POST http://localhost:3003/api/blogs
 Content-Type: application/json
 
 {
-  "content": "Ensure that everything still works",
-  "important": true
+  "title": "Test Title",
+  "author": "xuyanshi",
+  "url": "https://xuyanshi.github.io/",
+  "likes": 12345
 }
