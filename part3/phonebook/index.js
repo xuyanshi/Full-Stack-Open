@@ -48,6 +48,10 @@ const errorHandler = (err, req, res, next) => {
     next(err)
 }
 
+const unknownEndpoint = (req, res) => {
+    res.status(404).send({error: 'unknown endpoint'})
+}
+
 app.get('/', (request, response) => {
     response.send('<h1>Home Page</h1>')
 })
