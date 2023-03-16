@@ -14,5 +14,6 @@ const totalLikes = (blogs) => {
 }
 
 module.exports = {
-    dummy
+    dummy,
+    totalLikes
 }
