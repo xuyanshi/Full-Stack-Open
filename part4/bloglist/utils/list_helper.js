@@ -1,5 +1,5 @@
 const dummy = (blogs) => {
-
+    // ...
 }
 
 module.exports = {
