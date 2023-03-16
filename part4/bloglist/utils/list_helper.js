@@ -49,7 +49,25 @@ const mostBlogs = (blogs) => {
 }
 
 const mostLikes = (blogs) => {
-
+    let hashTable = {}
+    for (const blog of blogs) {
+        if (!hashTable.hasOwnProperty(blog.author)) {
+            hashTable[blog.author] = 0
+        }
+        hashTable[blog.author] += blog.likes
+    }
+    let mostBlogsAuthor = ''
+    let mostLikesAmount = -1
+    for (const author in hashTable) {
+        if (hashTable[author] > mostLikesAmount) {
+            mostBlogsAuthor = author
+            mostLikesAmount = hashTable[author]
+        }
+    }
+    return {
+        author: mostBlogsAuthor,
+        likes: mostLikesAmount
+    }
 }
 
 module.exports = {
