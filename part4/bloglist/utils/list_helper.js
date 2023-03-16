@@ -26,6 +26,10 @@ const favoriteBlog = (blogs) => {
     return maxLikes === -1 ? undefined : blogs[favoriteIdx]
 }
 
+const mostBlogs = (blogs) => {
+    
+}
+
 module.exports = {
     dummy,
     totalLikes,
