@@ -67,6 +67,7 @@ app.get('/info', (req, res) => {
     <div>${new Date().toDateString()} ${new Date().toTimeString()}</div>`)
 })
 
+// get information of the person
 app.get('/api/persons/:id', (req, res, next) => {
     Person.findById(req.params.id)
         .then(p => {
@@ -82,6 +83,7 @@ const generateId = () => {
     return Math.floor(Math.random() * Number.MAX_SAFE_INTEGER)
 }
 
+// add a new person
 app.post('/api/persons', (req, res) => {
     const body = req.body
     if (body.name === undefined || body.number === undefined) {
@@ -105,6 +107,7 @@ app.post('/api/persons', (req, res) => {
     })
 })
 
+// delete a person
 app.delete('/api/persons/:id', (req, res, next) => {
     // id is not a number now!!!!
     // const id = Number(req.params.id)
@@ -115,6 +118,12 @@ app.delete('/api/persons/:id', (req, res, next) => {
         .catch(err => next(err))
     // persons = persons.filter(p => p.id !== id)
     // res.status(204).end()
+})
+
+// update a person
+app.put('api/persons/:id', (req, res, next) => {
+    const body = req.body
+    const person = {}
 })
 
 app.use(unknownEndpoint)
