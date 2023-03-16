@@ -10,7 +10,8 @@
     "build:ui": "rm -rf build && cd ../../part2/phonebook/ && npm run build && cp -r build ../../part3/phonebook/",
     "deploy": "git push heroku main",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push && npm run deploy",
-    "logs:prod": "heroku logs --tail"
+    "logs:prod": "heroku logs --tail",
+    "lint": "eslint ."
   },
   "author": "xuyanshi",
   "license": "MIT",
