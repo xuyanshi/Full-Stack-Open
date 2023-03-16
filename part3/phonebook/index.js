@@ -83,6 +83,21 @@ const generateId = () => {
     return Math.floor(Math.random() * Number.MAX_SAFE_INTEGER)
 }
 
+// update a person
+app.put('api/persons/:id', (req, res, next) => {
+    const body = req.body
+    const person = {
+        name: body.name,
+        number: body.number,
+    }
+
+    Person.findByIdAndUpdate(req.params.id, person, {new: true})
+        .then(updatedPerson => {
+            res.json(updatedPerson)
+        })
+        .catch(err => next(err))
+})
+
 // add a new person
 app.post('/api/persons', (req, res) => {
     const body = req.body
@@ -118,20 +133,6 @@ app.delete('/api/persons/:id', (req, res, next) => {
         .catch(err => next(err))
 })
 
-// update a person
-app.put('api/persons/:id', (req, res, next) => {
-    const body = req.body
-    const person = {
-        name: body.name,
-        number: body.number,
-    }
-
-    Person.findByIdAndUpdate(req.params.id, person, {new: true})
-        .then(updatedPerson => {
-            res.json(updatedPerson)
-        })
-        .catch(err => next(err))
-})
 
 app.use(unknownEndpoint)
 
