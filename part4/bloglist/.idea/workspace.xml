@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbf485bc-e22c-46c7-ae1d-49bb4e4b5530" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/list_helper.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/list_helper.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/list_helper.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/list_helper.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +59,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Jest.favorite blog">
+  <component name="RunManager" selected="Jest.favorite blog.favorite blog of these 6 blogs">
     <configuration name="dummy returns one" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -86,6 +86,20 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="favorite blog.favorite blog of these 6 blogs" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/tests/list_helper.test.js" />
+      <test-names>
+        <test-name value="favorite blog" />
+        <test-name value="favorite blog of these 6 blogs" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="total likes" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -96,20 +110,6 @@
       <test-file value="$PROJECT_DIR$/tests/list_helper.test.js" />
       <test-names>
         <test-name value="total likes" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="total likes.total likes of these 5 blogs" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/tests/list_helper.test.js" />
-      <test-names>
-        <test-name value="total likes" />
-        <test-name value="total likes of these 5 blogs" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -125,11 +125,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.favorite blog.favorite blog of these 6 blogs" />
         <item itemvalue="npm.test" />
         <item itemvalue="Jest.favorite blog" />
         <item itemvalue="Jest.dummy returns one" />
         <item itemvalue="Jest.total likes" />
-        <item itemvalue="Jest.total likes.total likes of these 5 blogs" />
       </list>
     </recent_temporary>
   </component>
@@ -144,7 +144,7 @@
       <workItem from="1678946422429" duration="403000" />
       <workItem from="1678948888020" duration="1341000" />
       <workItem from="1678950862801" duration="5775000" />
-      <workItem from="1678964560464" duration="8465000" />
+      <workItem from="1678964560464" duration="8614000" />
     </task>
     <servers />
   </component>
