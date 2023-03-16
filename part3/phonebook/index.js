@@ -43,15 +43,15 @@ morgan.token('data', (req, res, param) => {
 const errorHandler = (err, req, res, next) => {
     console.error(err.message)
     if (err.name === 'CastError') {
-        return res.status(400).send({error: 'malformed id'})
+        return res.status(400).send({ error: 'malformed id' })
     } else if (err.name === 'ValidationError') {
-        return res.status(400).json({error: err.message})
+        return res.status(400).json({ error: err.message })
     }
     next(err)
 }
 
 const unknownEndpoint = (req, res) => {
-    res.status(404).send({error: 'unknown endpoint'})
+    res.status(404).send({ error: 'unknown endpoint' })
 }
 
 app.get('/', (request, response) => {
@@ -83,18 +83,18 @@ app.get('/api/persons/:id', (req, res, next) => {
         }).catch(err => next(err))
 })
 
-const generateId = () => {
-    return Math.floor(Math.random() * Number.MAX_SAFE_INTEGER)
-}
+// const generateId = () => {
+//     return Math.floor(Math.random() * Number.MAX_SAFE_INTEGER)
+// }
 
 // update a person
 app.put('/api/persons/:id', (req, res, next) => {
-    const {name, number} = req.body
+    const { name, number } = req.body
 
 
     Person.findByIdAndUpdate(req.params.id,
-        {name, number},
-        {new: true, runValidators: true, context: 'query'})
+        { name, number },
+        { new: true, runValidators: true, context: 'query' })
         .then(updatedPerson => {
             res.json(updatedPerson)
         })

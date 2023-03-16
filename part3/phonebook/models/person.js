@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose')
 const url = process.env.MONGODB_URI
 console.log('connecting to', url)
 
@@ -6,8 +6,8 @@ mongoose.connect(url)
     .then(result => {
         console.log('connected to MongoDB')
     }).catch((err) => {
-    console.log('error connecting to MongoDB', err.message)
-})
+        console.log('error connecting to MongoDB', err.message)
+    })
 
 const validator = (val) => {
     return /\d{2,3}-\d{5,}/.test(val)
