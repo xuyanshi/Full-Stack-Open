@@ -127,6 +127,7 @@ app.put('api/persons/:id', (req, res, next) => {
 })
 
 app.use(unknownEndpoint)
+
 app.use(errorHandler)
 
 const PORT = process.env.PORT
