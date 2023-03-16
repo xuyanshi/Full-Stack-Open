@@ -27,7 +27,11 @@ const favoriteBlog = (blogs) => {
 }
 
 const mostBlogs = (blogs) => {
-    
+
+}
+
+const mostLikes = (blogs) => {
+
 }
 
 module.exports = {
