@@ -74,7 +74,7 @@ describe('total likes', () => {
         expect(result).toBe(5)
     })
 
-    test('total likes of these 5 blogs', () => {
+    test('total likes of these 6 blogs', () => {
         const result = listHelper.totalLikes(blogs)
         expect(result).toBe(36)
     })
@@ -148,7 +148,7 @@ describe('favorite blog', () => {
         expect(result).toEqual(listWithOneBlog[0])
     })
 
-    test('total likes of these 5 blogs', () => {
+    test('favorite blog of these 6 blogs', () => {
         const result = listHelper.favoriteBlog(blogs)
         expect(result).toEqual(blogs[2])
     })
