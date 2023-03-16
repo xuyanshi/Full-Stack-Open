@@ -48,3 +48,5 @@ blogsRouter.delete('/:id', (req, res, next) => {
         })
         .catch(err => next(err))
 })
+
+// update one blog
