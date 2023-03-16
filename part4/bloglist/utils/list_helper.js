@@ -13,6 +13,11 @@ const totalLikes = (blogs) => {
     return total
 }
 
+const favoriteBlog = (blogs) => {
+    let favoriteIdx = -1
+    let daisukiBlog = undefined
+}
+
 module.exports = {
     dummy,
     totalLikes
