@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbf485bc-e22c-46c7-ae1d-49bb4e4b5530" name="Changes" comment="" />
+    <list default="true" id="bbf485bc-e22c-46c7-ae1d-49bb4e4b5530" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,7 +46,7 @@
     "WebServerToolWindowFactoryState": "false",
     "javascript.nodejs.core.library.configured.version": "16.19.0",
     "javascript.nodejs.core.library.typings.version": "16.18.16",
-    "last_opened_file_path": "C:/Users/xuyanshi/Code/Full-Stack-Open/part4/part4-learning",
+    "last_opened_file_path": "C:/Users/xuyanshi/Code/Full-Stack-Open/part4/bloglist",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -82,6 +84,7 @@
       <updated>1678946421029</updated>
       <workItem from="1678946422429" duration="403000" />
       <workItem from="1678948888020" duration="1341000" />
+      <workItem from="1678950862801" duration="7000" />
     </task>
     <servers />
   </component>
