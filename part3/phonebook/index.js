@@ -63,8 +63,10 @@ app.get('/api/persons', (req, res) => {
 })
 
 app.get('/info', (req, res) => {
-    res.send(`<div>Phonebook has info for ${persons.length} people<div>   
+    Person.find({}).then(persons => {
+        res.send(`<div>Phonebook has info for ${persons.length} people<div>   
     <div>${new Date().toDateString()} ${new Date().toTimeString()}</div>`)
+    })
 })
 
 // get information of the person
