@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbf485bc-e22c-46c7-ae1d-49bb4e4b5530" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/utils/list_helper.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/list_helper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/list_helper.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/list_helper.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,20 +59,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Jest.most blogs">
-    <configuration name="dummy returns one" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/tests/list_helper.test.js" />
-      <test-names>
-        <test-name value="dummy returns one" />
-      </test-names>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Jest.most likes">
     <configuration name="favorite blog" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -112,6 +100,19 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="most likes" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/tests/list_helper.test.js" />
+      <test-names>
+        <test-name value="most likes" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -124,11 +125,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.most likes" />
         <item itemvalue="Jest.most blogs" />
         <item itemvalue="Jest.favorite blog.favorite blog of these 6 blogs" />
         <item itemvalue="npm.test" />
         <item itemvalue="Jest.favorite blog" />
-        <item itemvalue="Jest.dummy returns one" />
       </list>
     </recent_temporary>
   </component>
@@ -143,7 +144,7 @@
       <workItem from="1678946422429" duration="403000" />
       <workItem from="1678948888020" duration="1341000" />
       <workItem from="1678950862801" duration="5775000" />
-      <workItem from="1678964560464" duration="8895000" />
+      <workItem from="1678964560464" duration="9091000" />
     </task>
     <servers />
   </component>
