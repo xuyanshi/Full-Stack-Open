@@ -27,7 +27,10 @@ const favoriteBlog = (blogs) => {
 }
 
 const mostBlogs = (blogs) => {
-
+    let hashTable = {}
+    for (const blog of blogs) {
+        
+    }
 }
 
 const mostLikes = (blogs) => {
