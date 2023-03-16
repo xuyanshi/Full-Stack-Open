@@ -116,8 +116,6 @@ app.delete('/api/persons/:id', (req, res, next) => {
             res.status(204).end()
         })
         .catch(err => next(err))
-    // persons = persons.filter(p => p.id !== id)
-    // res.status(204).end()
 })
 
 // update a person
