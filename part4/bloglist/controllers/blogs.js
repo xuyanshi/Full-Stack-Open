@@ -25,7 +25,9 @@ blogsRouter.get('/:id', (req, res, next) => {
 // create a new blog
 blogsRouter.post('/', (req, res, next) => {
     const body = req.body
-
+    if (body.likes === undefined) {
+        body.likes = 0
+    }
     const blog = new Blog({
         title: body.title,
         author: body.author,
