@@ -58,7 +58,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Jest.create a new blog without likes">
+  <component name="RunManager" selected="Jest.create a new blog">
     <configuration name="blog id" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -85,6 +85,19 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="create a new blog without title" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/tests/blog_api.test.js" />
+      <test-names>
+        <test-name value="create a new blog without title" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="create a new blog" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -95,19 +108,6 @@
       <test-file value="$PROJECT_DIR$/tests/blog_api.test.js" />
       <test-names>
         <test-name value="create a new blog" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="the first blog is about test" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/tests/blog_api.test.js" />
-      <test-names>
-        <test-name value="the first blog is about test" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -123,11 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.create a new blog without likes" />
         <item itemvalue="Jest.create a new blog" />
+        <item itemvalue="Jest.create a new blog without title" />
+        <item itemvalue="Jest.create a new blog without likes" />
         <item itemvalue="npm.dev" />
         <item itemvalue="Jest.blog id" />
-        <item itemvalue="Jest.the first blog is about test" />
       </list>
     </recent_temporary>
   </component>
@@ -144,7 +144,7 @@
       <workItem from="1678950862801" duration="5775000" />
       <workItem from="1678964560464" duration="9282000" />
       <workItem from="1679038727375" duration="6155000" />
-      <workItem from="1679051396889" duration="6730000" />
+      <workItem from="1679051396889" duration="6778000" />
     </task>
     <servers />
   </component>

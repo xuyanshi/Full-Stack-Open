@@ -23,7 +23,11 @@ blogsRouter.get('/:id', (req, res, next) => {
 })
 
 // create a new blog
-blogsRouter.post('/', async (req, res, next) => {
+<<<<<<< HEAD
+blogsRouter.post('/', async (req, res) => {
+=======
+blogsRouter.post('/', (req, res, next) => {
+>>>>>>> parent of 17c6460 (try-catch)
     const body = req.body
     if (body.likes === undefined) {
         body.likes = 0
@@ -34,8 +38,17 @@ blogsRouter.post('/', async (req, res, next) => {
         url: body.url,
         likes: body.likes,
     })
+<<<<<<< HEAD
     const savedBlog = await blog.save()
     res.status(201).json(savedBlog)
+=======
+
+    blog.save()
+        .then(savedBlog => {
+            res.status(201).json(savedBlog)
+        })
+        .catch(err => next(err))
+>>>>>>> parent of 17c6460 (try-catch)
 })
 
 // delete one blog
