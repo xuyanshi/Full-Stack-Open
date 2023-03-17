@@ -17,6 +17,11 @@ test('there are 2 blogs', async () => {
     expect(response.body).toHaveLength(2)
 }, 100000)
 
+test('the first blog is about test', async () => {
+    const response = await api.get('/api/blogs')
+
+    
+})
 
 afterAll(() => {
     mongoose.connection.close()
