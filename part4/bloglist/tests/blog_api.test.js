@@ -54,11 +54,30 @@ test('create a new blog', async () => {
         .expect(201)
         .expect('Content-Type', /application\/json/)
 
-    const response = await api.get('/api/blogs')
+    const blogsAtEnd = await helper.blogsInDb()
+    expect(blogsAtEnd).toHaveLength(helper.initialBlogs.length + 1)
 
-    const titles = response.body.map(r => r.title)
+    const titles = blogsAtEnd.map(b => b.title)
+    expect(titles).toContain("quick sort")
+}, 100000)
 
-    expect(response.body).toHaveLength(helper.initialBlogs.length + 1)
+test('create a new blog without likes', async () => {
+    const newBlog = {
+        "title": "quick sort",
+        "author": "unknown",
+        "url": "https://xuyanshi.github.io/posts/quick-sort/",
+    }
+
+    await api
+        .post('/api/blogs')
+        .send(newBlog)
+        .expect(201)
+        .expect('Content-Type', /application\/json/)
+
+    const blogsAtEnd = await helper.blogsInDb()
+    expect(blogsAtEnd).toHaveLength(helper.initialBlogs.length + 1)
+
+    const titles = blogsAtEnd.map(b => b.title)
     expect(titles).toContain("quick sort")
 }, 100000)
 

@@ -7,7 +7,6 @@
     <list default="true" id="bbf485bc-e22c-46c7-ae1d-49bb4e4b5530" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/blog_api.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/blog_api.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_helper.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_helper.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +59,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Jest.create a new blog">
+  <component name="RunManager" selected="Jest.create a new blog without likes">
     <configuration name="blog id" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -71,6 +70,19 @@
       <test-file value="$PROJECT_DIR$/tests/blog_api.test.js" />
       <test-names>
         <test-name value="blog id" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="create a new blog without likes" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/tests/blog_api.test.js" />
+      <test-names>
+        <test-name value="create a new blog without likes" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -100,19 +112,6 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="there are 2 blogs" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/tests/blog_api.test.js" />
-      <test-names>
-        <test-name value="there are 2 blogs" />
-      </test-names>
-      <method v="2" />
-    </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -125,11 +124,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.create a new blog without likes" />
         <item itemvalue="Jest.create a new blog" />
         <item itemvalue="npm.dev" />
         <item itemvalue="Jest.blog id" />
         <item itemvalue="Jest.the first blog is about test" />
-        <item itemvalue="Jest.there are 2 blogs" />
       </list>
     </recent_temporary>
   </component>
@@ -146,7 +145,7 @@
       <workItem from="1678950862801" duration="5775000" />
       <workItem from="1678964560464" duration="9282000" />
       <workItem from="1679038727375" duration="6155000" />
-      <workItem from="1679051396889" duration="5375000" />
+      <workItem from="1679051396889" duration="5927000" />
     </task>
     <servers />
   </component>
