@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbf485bc-e22c-46c7-ae1d-49bb4e4b5530" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/blog_api.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/blog_api.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,18 +59,17 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Jest.most likes">
-    <configuration name="favorite blog.favorite blog of these 6 blogs" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Jest.blogs are returned as json">
+    <configuration name="blogs are returned as json" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/tests/list_helper.test.js" />
+      <test-file value="$PROJECT_DIR$/tests/blog_api.test.js" />
       <test-names>
-        <test-name value="favorite blog" />
-        <test-name value="favorite blog of these 6 blogs" />
+        <test-name value="blogs are returned as json" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -121,11 +121,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.blogs are returned as json" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.test" />
         <item itemvalue="Jest.most likes" />
         <item itemvalue="Jest.most blogs" />
-        <item itemvalue="Jest.favorite blog.favorite blog of these 6 blogs" />
       </list>
     </recent_temporary>
   </component>
@@ -141,7 +141,7 @@
       <workItem from="1678948888020" duration="1341000" />
       <workItem from="1678950862801" duration="5775000" />
       <workItem from="1678964560464" duration="9282000" />
-      <workItem from="1679038727375" duration="4232000" />
+      <workItem from="1679038727375" duration="4650000" />
     </task>
     <servers />
   </component>
