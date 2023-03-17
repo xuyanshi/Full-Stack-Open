@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bbf485bc-e22c-46c7-ae1d-49bb4e4b5530" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/blogs.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/blogs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/blog_api.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/blog_api.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,10 +60,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Jest.blog id">
-    <configuration name="create_blog | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/requests/create_blog.rest" requestIdentifier="#1" runType="Run single request">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Jest.create a new blog">
     <configuration name="blog id" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -73,6 +71,19 @@
       <test-file value="$PROJECT_DIR$/tests/blog_api.test.js" />
       <test-names>
         <test-name value="blog id" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="create a new blog" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/tests/blog_api.test.js" />
+      <test-names>
+        <test-name value="create a new blog" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -114,11 +125,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.create a new blog" />
         <item itemvalue="npm.dev" />
         <item itemvalue="Jest.blog id" />
         <item itemvalue="Jest.the first blog is about test" />
         <item itemvalue="Jest.there are 2 blogs" />
-        <item itemvalue="HTTP Request.create_blog | #1" />
       </list>
     </recent_temporary>
   </component>
@@ -135,7 +146,7 @@
       <workItem from="1678950862801" duration="5775000" />
       <workItem from="1678964560464" duration="9282000" />
       <workItem from="1679038727375" duration="6155000" />
-      <workItem from="1679051396889" duration="3850000" />
+      <workItem from="1679051396889" duration="3963000" />
     </task>
     <servers />
   </component>

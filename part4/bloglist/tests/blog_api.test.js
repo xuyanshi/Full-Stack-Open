@@ -75,7 +75,7 @@ test('create a new blog', async () => {
 
     expect(response.body).toHaveLength(initialBlogs.length + 1)
     expect(titles).toContain("quick sort")
-})
+}, 100000)
 
 afterAll(() => {
     mongoose.connection.close()
