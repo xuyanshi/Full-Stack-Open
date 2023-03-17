@@ -4,6 +4,8 @@ const app = require('../app')
 const api = supertest(app)
 const helper = require('./test_helper')
 
+const Blog = require('../models/blog')
+
 beforeEach(async () => {
     await Blog.deleteMany({})
     for (let blog of helper.initialBlogs) {
@@ -22,7 +24,7 @@ test('blogs are returned as json', async () => {
 test('there are 2 blogs', async () => {
     const response = await api.get('/api/blogs')
 
-    expect(response.body).toHaveLength(initialBlogs.length)
+    expect(response.body).toHaveLength(helper.initialBlogs.length)
 }, 100000)
 
 test('the first blog is about test', async () => {
@@ -56,7 +58,7 @@ test('create a new blog', async () => {
 
     const titles = response.body.map(r => r.title)
 
-    expect(response.body).toHaveLength(initialBlogs.length + 1)
+    expect(response.body).toHaveLength(helper.initialBlogs.length + 1)
     expect(titles).toContain("quick sort")
 }, 100000)
 
