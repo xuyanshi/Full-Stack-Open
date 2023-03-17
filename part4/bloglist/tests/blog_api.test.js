@@ -23,6 +23,12 @@ test('the first blog is about test', async () => {
     expect(response.body[0].title).toBe('Test Title')
 }, 100000)
 
+test('blog id', async () => {
+    const response = await api.get('/api/blogs')
+
+    expect(response.body[0].id).toBeDefined()
+}, 100000)
+
 afterAll(() => {
     mongoose.connection.close()
 })
