@@ -130,9 +130,10 @@ test('update a blog', async () => {
             updatedId = b.id
         }
     }
-    console.log(blogForUpdating.id)
+    console.log('blogForUpdating.id', blogForUpdating.id)
     await api
-        .put(`/api/blogs/${blogForUpdating.id}`)
+        .put(`/api/blogs/${updatedId}`)
+        .send(blogForUpdating)
         .expect(200)
 
     const blogsAtEnd = await helper.blogsInDb()
