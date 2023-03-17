@@ -57,19 +57,6 @@
   }
 }</component>
   <component name="RunManager" selected="Jest.most likes">
-    <configuration name="favorite blog" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/tests/list_helper.test.js" />
-      <test-names>
-        <test-name value="favorite blog" />
-      </test-names>
-      <method v="2" />
-    </configuration>
     <configuration name="favorite blog.favorite blog of these 6 blogs" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -110,6 +97,16 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -122,11 +119,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.test" />
         <item itemvalue="Jest.most likes" />
         <item itemvalue="Jest.most blogs" />
         <item itemvalue="Jest.favorite blog.favorite blog of these 6 blogs" />
-        <item itemvalue="Jest.favorite blog" />
       </list>
     </recent_temporary>
   </component>
@@ -142,7 +139,7 @@
       <workItem from="1678948888020" duration="1341000" />
       <workItem from="1678950862801" duration="5775000" />
       <workItem from="1678964560464" duration="9282000" />
-      <workItem from="1679038727375" duration="2535000" />
+      <workItem from="1679038727375" duration="2603000" />
     </task>
     <servers />
   </component>
