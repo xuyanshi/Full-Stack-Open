@@ -59,11 +59,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Jest.the first blog is about test">
+  <component name="RunManager" selected="Jest.blog id">
     <configuration name="create_blog | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/requests/create_blog.rest" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="blogs are returned as json" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="blog id" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
@@ -72,7 +72,7 @@
       <scope-kind value="TEST" />
       <test-file value="$PROJECT_DIR$/tests/blog_api.test.js" />
       <test-names>
-        <test-name value="blogs are returned as json" />
+        <test-name value="blog id" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -102,26 +102,23 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="there is one blog" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
       <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
       <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/tests/blog_api.test.js" />
-      <test-names>
-        <test-name value="there is one blog" />
-      </test-names>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
+        <item itemvalue="Jest.blog id" />
         <item itemvalue="Jest.the first blog is about test" />
         <item itemvalue="Jest.there are 2 blogs" />
         <item itemvalue="HTTP Request.create_blog | #1" />
-        <item itemvalue="Jest.there is one blog" />
-        <item itemvalue="Jest.blogs are returned as json" />
       </list>
     </recent_temporary>
   </component>
