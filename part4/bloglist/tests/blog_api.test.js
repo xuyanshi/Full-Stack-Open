@@ -68,6 +68,10 @@ test('create a new blog', async () => {
         .send(newBlog)
         .expect(201)
         .expect('Content-Type', /application\/json/)
+
+    const response = await api.get('/api/blogs')
+
+    const titles = response.body.map(r => r.title)
 })
 
 afterAll(() => {
