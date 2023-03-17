@@ -1,3 +1,57 @@
+PUT http://localhost:3003/api/blogs/641473d7f7adeadb845e3b0e
+Content-Type: application/json
+Content-Length: 110
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "KMP algorithm",
+  "author": "K-M-P",
+  "url": "https://xuyanshi.github.io/",
+  "likes": 123456
+}
+
+<> 2023-03-17T221156.200.json
+
+###
+
+PUT http://localhost:3003/api/blogs/641473d7f7adeadb845e3b0e
+Content-Type: application/json
+Content-Length: 110
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "KMP algorithm",
+  "author": "K-M-P",
+  "url": "https://xuyanshi.github.io/",
+  "likes": 123456
+}
+
+<> 2023-03-17T221119.200.json
+
+###
+
+PUT http://localhost:3003/api/blogs/641473d7f7adeadb845e3b0e
+Content-Type: application/json
+Content-Length: 113
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "KMP algorithm",
+  "author": "K-M-P",
+  "url": "https://xuyanshi.github.io/",
+  "likes": 123456789
+}
+
+<> 2023-03-17T221051.200.json
+
+###
+
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
 Content-Length: 82

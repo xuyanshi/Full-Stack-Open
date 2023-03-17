@@ -135,6 +135,7 @@ test('update a blog', async () => {
         .put(`/api/blogs/${updatedId}`)
         .send(blogForUpdating)
         .expect(200)
+        .expect('Content-Type', /application\/json/)
 
     const blogsAtEnd = await helper.blogsInDb()
     expect(blogsAtEnd).toHaveLength(helper.initialBlogs.length)
