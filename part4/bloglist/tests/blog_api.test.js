@@ -81,6 +81,41 @@ test('create a new blog without likes', async () => {
     expect(titles).toContain("quick sort")
 }, 100000)
 
+test('create a new blog without title', async () => {
+    const newBlog = {
+        "author": "unknown",
+        "url": "https://xuyanshi.github.io/posts/quick-sort/",
+        "likes": 100
+    }
+
+    await api
+        .post('/api/blogs')
+        .send(newBlog)
+        .expect(400)
+        .expect('Content-Type', /application\/json/)
+
+    const blogsAtEnd = await helper.blogsInDb()
+    expect(blogsAtEnd).toHaveLength(helper.initialBlogs.length)
+}, 100000)
+
+test('create a new blog without url', async () => {
+    const newBlog = {
+        "title": "quick sort",
+        "author": "unknown",
+        "likes": 100
+    }
+
+    await api
+        .post('/api/blogs')
+        .send(newBlog)
+        .expect(400)
+        .expect('Content-Type', /application\/json/)
+
+    const blogsAtEnd = await helper.blogsInDb()
+    expect(blogsAtEnd).toHaveLength(helper.initialBlogs.length)
+
+}, 100000)
+
 afterAll(() => {
     mongoose.connection.close()
 })

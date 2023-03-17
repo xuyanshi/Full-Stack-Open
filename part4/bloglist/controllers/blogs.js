@@ -35,8 +35,8 @@ blogsRouter.post('/', (req, res, next) => {
         url: body.url,
         likes: body.likes,
     })
-    const savedBlog = blog.save()
-    res.status(201).json(savedBlog)
+    // const savedBlog = blog.save()
+    // res.status(201).json(savedBlog)
 
     blog.save()
         .then(savedBlog => {
