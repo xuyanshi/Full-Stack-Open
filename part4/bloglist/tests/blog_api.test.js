@@ -116,6 +116,7 @@ test('create a new blog without url', async () => {
 
 }, 100000)
 
+
 test('delete a blog', async () => {
     const blogsAtStart = await helper.blogsInDb()
     const blogToDelete = blogsAtStart[0]
@@ -127,8 +128,9 @@ test('delete a blog', async () => {
     const blogsAtEnd = await helper.blogsInDb()
     expect(blogsAtEnd).toHaveLength(helper.initialBlogs.length - 1)
 
-
-})
+    const titles = blogsAtEnd.map(b => b.title)
+    expect(titles).not.toContain(blogToDelete.title)
+}, 100000)
 
 afterAll(() => {
     mongoose.connection.close()

@@ -59,21 +59,8 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Jest.create a new blog without title">
+  <component name="RunManager" selected="Jest.delete a blog">
     <configuration name="create_blog | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/requests/create_blog.rest" requestIdentifier="#1" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="create a new blog without likes" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/tests/blog_api.test.js" />
-      <test-names>
-        <test-name value="create a new blog without likes" />
-      </test-names>
       <method v="2" />
     </configuration>
     <configuration name="create a new blog without title" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
@@ -102,6 +89,19 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="delete a blog" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/tests/blog_api.test.js" />
+      <test-names>
+        <test-name value="delete a blog" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -114,11 +114,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.delete a blog" />
         <item itemvalue="Jest.create a new blog without title" />
         <item itemvalue="HTTP Request.create_blog | #1" />
         <item itemvalue="npm.dev" />
         <item itemvalue="Jest.create a new blog" />
-        <item itemvalue="Jest.create a new blog without likes" />
       </list>
     </recent_temporary>
   </component>
@@ -135,7 +135,7 @@
       <workItem from="1678950862801" duration="5775000" />
       <workItem from="1678964560464" duration="9282000" />
       <workItem from="1679038727375" duration="6155000" />
-      <workItem from="1679051396889" duration="8763000" />
+      <workItem from="1679051396889" duration="8860000" />
     </task>
     <servers />
   </component>
