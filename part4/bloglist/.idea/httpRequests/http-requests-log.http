@@ -12,6 +12,24 @@ Accept-Encoding: br,deflate,gzip,x-gzip
   "likes": 12345
 }
 
+<> 2023-03-17T185258.200.json
+
+###
+
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Content-Length: 109
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Test Title",
+  "author": "xuyanshi",
+  "url": "https://xuyanshi.github.io/",
+  "likes": 12345
+}
+
 <> 2023-03-16T153353.201.json
 
 ###
