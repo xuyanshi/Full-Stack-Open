@@ -117,7 +117,28 @@ test('create a new blog without url', async () => {
 }, 100000)
 
 test('update a blog', async () => {
-    // ...
+    const blogsAtStart = await helper.blogsInDb()
+    const blogToUpdate = {
+        "title": "KMP algorithm",
+        "author": "K-M-P",
+        "url": "https://xuyanshi.github.io/",
+        "likes": 12345678,
+    }
+    let updatedId = ''
+    for (const b of blogsAtStart) {
+        if (b.title === blogToUpdate.title) {
+            updatedId = b.id
+        }
+    }
+    await api
+        .put(`/api/blogs/${blogToUpdate.id}`)
+        .expect(200)
+
+    const blogsAtEnd = await helper.blogsInDb()
+    expect(blogsAtEnd).toHaveLength(helper.initialBlogs.length)
+
+    const titles = blogsAtEnd.map(b => b.title)
+    expect(titles).toContain(blogToUpdate.title)
 }, 100000)
 
 test('delete a blog', async () => {
