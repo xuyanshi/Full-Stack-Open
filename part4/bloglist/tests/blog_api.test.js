@@ -72,6 +72,9 @@ test('create a new blog', async () => {
     const response = await api.get('/api/blogs')
 
     const titles = response.body.map(r => r.title)
+
+    expect(response.body).toHaveLength(initialBlogs.length + 1)
+    expect(titles).toContain("quick sort")
 })
 
 afterAll(() => {
