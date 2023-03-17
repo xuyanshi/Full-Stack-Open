@@ -55,6 +55,15 @@ test('blog id', async () => {
     expect(response.body[0].id).toBeDefined()
 }, 100000)
 
+test('create a new blog', async () => {
+    const newBlog = {
+        "title": "quick sort",
+        "author": "unknown",
+        "url": "https://xuyanshi.github.io/posts/quick-sort/",
+        "likes": 100
+    }
+})
+
 afterAll(() => {
     mongoose.connection.close()
 })
