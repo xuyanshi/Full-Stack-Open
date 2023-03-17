@@ -2,28 +2,11 @@ const mongoose = require('mongoose')
 const supertest = require('supertest')
 const app = require('../app')
 const api = supertest(app)
-const Blog = require('../models/blog')
-
-const initialBlogs = [
-    {
-        "title": "Test Title",
-        "author": "xuyanshi",
-        "url": "https://xuyanshi.github.io/",
-        "likes": 12345,
-        "id": "6414468a31cc17f65a79f48c"
-    },
-    {
-        "title": "KMP algorithm",
-        "author": "K-M-P",
-        "url": "https://xuyanshi.github.io/",
-        "likes": 123456,
-        "id": "641448f7ee77b454be7d05fd"
-    }
-]
+const helper = require('./test_helper')
 
 beforeEach(async () => {
     await Blog.deleteMany({})
-    for (let blog of initialBlogs) {
+    for (let blog of helper.initialBlogs) {
         let blogObject = new Blog(blog)
         await blogObject.save()
     }
