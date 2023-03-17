@@ -62,6 +62,12 @@ test('create a new blog', async () => {
         "url": "https://xuyanshi.github.io/posts/quick-sort/",
         "likes": 100
     }
+
+    await api
+        .post('/api/blogs')
+        .send(newBlog)
+        .expect(201)
+        .expect('Content-Type', /application\/json/)
 })
 
 afterAll(() => {
