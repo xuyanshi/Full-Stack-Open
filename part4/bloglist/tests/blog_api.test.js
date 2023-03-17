@@ -116,6 +116,9 @@ test('create a new blog without url', async () => {
 
 }, 100000)
 
+test('update a blog', async () => {
+    // ...
+}, 100000)
 
 test('delete a blog', async () => {
     const blogsAtStart = await helper.blogsInDb()
