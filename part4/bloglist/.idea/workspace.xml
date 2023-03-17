@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbf485bc-e22c-46c7-ae1d-49bb4e4b5530" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/tests/blog_api.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/blog_api.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requests/create_blog.rest" beforeDir="false" afterPath="$PROJECT_DIR$/requests/create_blog.rest" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +134,7 @@
       <workItem from="1678950862801" duration="5775000" />
       <workItem from="1678964560464" duration="9282000" />
       <workItem from="1679038727375" duration="6155000" />
-      <workItem from="1679051396889" duration="10114000" />
+      <workItem from="1679051396889" duration="10417000" />
     </task>
     <servers />
   </component>
@@ -160,9 +160,9 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/tests/blog_api.test.js</url>
-          <line>133</line>
-          <option name="temporary" value="true" />
-          <option name="timeStamp" value="2" />
+          <line>138</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,0 +1,8 @@
+PUT http://localhost:3003/api/blogs/641473d7f7adeadb845e3b0e
+Content-Type: application/json
+
+{
+  "author": "K-M-P",
+  "url": "https://xuyanshi.github.io/",
+  "likes": 123456
+}
