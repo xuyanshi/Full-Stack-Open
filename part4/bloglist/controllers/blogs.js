@@ -23,7 +23,7 @@ blogsRouter.get('/:id', (req, res, next) => {
 })
 
 // create a new blog
-blogsRouter.post('/', (req, res, next) => {
+blogsRouter.post('/', async (req, res, next) => {
     const body = req.body
     if (body.likes === undefined) {
         body.likes = 0
@@ -34,12 +34,14 @@ blogsRouter.post('/', (req, res, next) => {
         url: body.url,
         likes: body.likes,
     })
+    try {
+        const savedBlog = await blog.save()
+        res.status(201).json(savedBlog)
+    } catch (exception) {
+        next(exception)
+    }
 
-    blog.save()
-        .then(savedBlog => {
-            res.status(201).json(savedBlog)
-        })
-        .catch(err => next(err))
+
 })
 
 // delete one blog
