@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbf485bc-e22c-46c7-ae1d-49bb4e4b5530" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/blog_api.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/blog_api.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +59,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="HTTP Request.create_blog | #1">
+  <component name="RunManager" selected="Jest.there are 2 blogs">
     <configuration name="create_blog | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/requests/create_blog.rest" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -76,16 +76,29 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="most likes" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="there are 2 blogs" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/tests/list_helper.test.js" />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/tests/blog_api.test.js" />
       <test-names>
-        <test-name value="most likes" />
+        <test-name value="there are 2 blogs" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="there is one blog" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/tests/blog_api.test.js" />
+      <test-names>
+        <test-name value="there is one blog" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -99,23 +112,13 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.there are 2 blogs" />
         <item itemvalue="HTTP Request.create_blog | #1" />
+        <item itemvalue="Jest.there is one blog" />
         <item itemvalue="Jest.blogs are returned as json" />
         <item itemvalue="npm.dev" />
-        <item itemvalue="npm.test" />
-        <item itemvalue="Jest.most likes" />
       </list>
     </recent_temporary>
   </component>
@@ -131,7 +134,7 @@
       <workItem from="1678948888020" duration="1341000" />
       <workItem from="1678950862801" duration="5775000" />
       <workItem from="1678964560464" duration="9282000" />
-      <workItem from="1679038727375" duration="5611000" />
+      <workItem from="1679038727375" duration="5706000" />
     </task>
     <servers />
   </component>

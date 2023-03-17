@@ -1,9 +1,7 @@
-POST http://localhost:3003/api/blogs
-Content-Type: application/json
-
 {
   "title": "KMP algorithm",
   "author": "K-M-P",
   "url": "https://xuyanshi.github.io/",
-  "likes": 123456
+  "likes": 123456,
+  "id": "641448f7ee77b454be7d05fd"
 }
