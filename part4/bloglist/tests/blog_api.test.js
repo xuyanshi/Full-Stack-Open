@@ -20,7 +20,7 @@ test('there are 2 blogs', async () => {
 test('the first blog is about test', async () => {
     const response = await api.get('/api/blogs')
 
-    
+    expect(response.body[0].title).toBe('Test Title')
 })
 
 afterAll(() => {
