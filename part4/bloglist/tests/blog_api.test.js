@@ -21,6 +21,10 @@ const initialBlogs = [
     }
 ]
 
+beforeEach(async () => {
+    // ...
+})
+
 test('blogs are returned as json', async () => {
     await api
         .get('/api/blogs')
