@@ -17,6 +17,7 @@ test('there are 2 blogs', async () => {
     expect(response.body).toHaveLength(2)
 }, 100000)
 
+
 afterAll(() => {
     mongoose.connection.close()
 })
