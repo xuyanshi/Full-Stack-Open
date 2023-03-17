@@ -16,3 +16,8 @@ const initialBlogs = [
         "id": "641448f7ee77b454be7d05fd"
     }
 ]
+
+const blogsInDb = async () => {
+    const blogs = await Blog.find({})
+    return blogs.map(blog => blog.toJSON())
+}
