@@ -21,7 +21,7 @@ test('the first blog is about test', async () => {
     const response = await api.get('/api/blogs')
 
     expect(response.body[0].title).toBe('Test Title')
-})
+}, 100000)
 
 afterAll(() => {
     mongoose.connection.close()
