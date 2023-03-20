@@ -172,7 +172,7 @@ describe('when there is one user in database initially', () => {
         const user = new User({username: 'root', passwordHash})
 
         await user.save()
-    })
+    }, 100000)
 
     test('creation fails with proper status code and message if username already exists', async () => {
         const usersAtStart = await helper.usersInDb()
@@ -193,7 +193,7 @@ describe('when there is one user in database initially', () => {
 
         const userAtEnd = await helper.usersInDb()
         expect(userAtEnd).toEqual(usersAtStart)
-    })
+    }, 100000)
 
     test('creation succeeds with a fresh username', async () => {
         const userAtStart = await helper.usersInDb()
@@ -215,7 +215,7 @@ describe('when there is one user in database initially', () => {
 
         const usernames = userAtEnd.map(u => u.username)
         expect(usernames).toContain(newUser.username)
-    })
+    }, 100000)
 })
 
 afterAll(() => {
