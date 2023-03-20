@@ -4,10 +4,10 @@ const User = require('../models/user')
 const {json} = require("express");
 
 // get all blogs
-blogsRouter.get('/', (req, res) => {
-    Blog.find({}).then(b => {
-        res.json(b)
-    })
+blogsRouter.get('/', async (req, res) => {
+    const blogs = await Blog
+        .find({})
+        .populate('user', {username: 1, id: 1})
 })
 
 // get one blog
