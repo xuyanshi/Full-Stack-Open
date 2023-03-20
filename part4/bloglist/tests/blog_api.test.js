@@ -2,9 +2,12 @@ const mongoose = require('mongoose')
 const supertest = require('supertest')
 const app = require('../app')
 const api = supertest(app)
+const bcrypt = require('bcryptjs')
 const helper = require('./test_helper')
 
+const User = require('../models/user')
 const Blog = require('../models/blog')
+const {text} = require("express");
 
 beforeEach(async () => {
     await Blog.deleteMany({})
@@ -160,6 +163,39 @@ test('delete a blog', async () => {
     const titles = blogsAtEnd.map(b => b.title)
     expect(titles).not.toContain(blogToDelete.title)
 }, 100000)
+
+describe('when there is one user in database initially', () => {
+    beforeEach(async () => {
+        await User.deleteMany({})
+
+        const passwordHash = await bcrypt.hash('secret', 10)
+        const user = new User({username: 'root', passwordHash})
+
+        await user.save()
+    })
+
+    text('creation succeeds with a fresh username', async () => {
+        const userAtStart = await helper.usersInDb()
+
+        const newUser = {
+            username: 'xuyanshi',
+            name: 'Yanshi Xu',
+            password: 'mima',
+        }
+
+        await api
+            .post('/api/users')
+            .send(newUser)
+            .expect(201)
+            .expect('Content-Type', /application\/json/)
+
+        const userAtEnd = await helper.usersInDb()
+        expect(userAtEnd).toHaveLength(userAtStart.length + 1)
+
+        const usernames = userAtEnd.map(u => u.username)
+        expect(usernames).toContain(newUser.username)
+    })
+})
 
 afterAll(() => {
     mongoose.connection.close()
