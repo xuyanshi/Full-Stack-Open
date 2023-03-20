@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbf485bc-e22c-46c7-ae1d-49bb4e4b5530" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/controllers/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,9 +59,6 @@
   }
 }]]></component>
   <component name="RunManager" selected="Jest.update a blog">
-    <configuration name="create_blog | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/requests/create_blog.rest" requestIdentifier="#1" runType="Run single request">
-      <method v="2" />
-    </configuration>
     <configuration name="update_blog | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/requests/update_blog.rest" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -104,13 +101,23 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
         <item itemvalue="Jest.update a blog" />
         <item itemvalue="HTTP Request.update_blog | #1" />
         <item itemvalue="Jest.delete a blog" />
         <item itemvalue="Jest.create a new blog without title" />
-        <item itemvalue="HTTP Request.create_blog | #1" />
       </list>
     </recent_temporary>
   </component>
@@ -129,7 +136,7 @@
       <workItem from="1679038727375" duration="6155000" />
       <workItem from="1679051396889" duration="13501000" />
       <workItem from="1679070549370" duration="321000" />
-      <workItem from="1679305402129" duration="6085000" />
+      <workItem from="1679305402129" duration="6428000" />
     </task>
     <servers />
   </component>
