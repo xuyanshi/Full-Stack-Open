@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbf485bc-e22c-46c7-ae1d-49bb4e4b5530" name="Changes" comment="" />
+    <list default="true" id="bbf485bc-e22c-46c7-ae1d-49bb4e4b5530" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,8 +47,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "javascript.nodejs.core.library.configured.version": "19.8.1",
-    "javascript.nodejs.core.library.typings.version": "",
+    "javascript.nodejs.core.library.configured.version": "16.19.0",
+    "javascript.nodejs.core.library.typings.version": "16.18.16",
     "last_opened_file_path": "C:/Users/xuyanshi/Code/Full-Stack-Open/part4/bloglist",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -127,6 +132,7 @@
       <workItem from="1679038727375" duration="6155000" />
       <workItem from="1679051396889" duration="13501000" />
       <workItem from="1679070549370" duration="321000" />
+      <workItem from="1679305402129" duration="330000" />
     </task>
     <servers />
   </component>
