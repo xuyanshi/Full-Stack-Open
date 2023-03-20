@@ -19,3 +19,4 @@ userSchema.set('toJSON', {
     }
 })
 
+module.exports = User
