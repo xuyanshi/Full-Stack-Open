@@ -1,3 +1,22 @@
+POST http://localhost:3003/api/blogs/
+Content-Type: application/json
+Content-Length: 143
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Merge Sort",
+  "author": "Test",
+  "url": "https://xuyanshi.github.io/",
+  "likes": 100,
+  "userId": "64184470cb41f95961837d24"
+}
+
+<> 2023-03-20T195322.200.json
+
+###
+
 PUT http://localhost:3003/api/blogs/641473d7f7adeadb845e3b0e
 Content-Type: application/json
 Content-Length: 110

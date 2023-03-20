@@ -23,10 +23,11 @@ blogsRouter.get('/:id', (req, res, next) => {
 })
 
 // create a new blog
-
-blogsRouter.post('/', (req, res, next) => {
-
+blogsRouter.post('/', async (req, res, next) => {
     const body = req.body
+
+    const user = await User.findById(body.userId)
+
     if (body.likes === undefined) {
         body.likes = 0
     }
@@ -35,15 +36,13 @@ blogsRouter.post('/', (req, res, next) => {
         author: body.author,
         url: body.url,
         likes: body.likes,
+        user: user._id
     })
-    // const savedBlog = blog.save()
-    // res.status(201).json(savedBlog)
+    const savedBlog = await blog.save()
+    user.blogs = user.blogs.concat(savedBlog._id)
+    await user.save()
 
-    blog.save()
-        .then(savedBlog => {
-            res.status(201).json(savedBlog)
-        })
-        .catch(err => next(err))
+    res.json(savedBlog)
 })
 
 // delete one blog
