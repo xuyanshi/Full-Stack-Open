@@ -151,9 +151,7 @@ const App = () => {
     const handleLogout = async (event) => {
         event.preventDefault()
         try {
-            const user = await loginService.login({
-                username, password
-            })
+            await loginService.logout(user)
             blogService.setToken(user.token)
             window.localStorage.setItem(
                 'loggedBlogappUser', JSON.stringify(user)

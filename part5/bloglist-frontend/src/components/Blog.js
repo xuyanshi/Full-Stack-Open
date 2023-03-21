@@ -4,7 +4,7 @@ const Blog = ({blog}) => (
             <li>Title: {blog.title}</li>
             <li>Author: {blog.author}</li>
             <li>Url: {blog.url}</li>
-            <li> Likes: {blog.likes}</li>
+            <li>Likes: {blog.likes}</li>
         </ul>
     </div>
 )
