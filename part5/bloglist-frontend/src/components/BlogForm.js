@@ -1,6 +1,6 @@
 import {useState} from 'react'
 // TODO: unfinished
-const blogForm = ({createNote}) => {
+const BlogForm = ({createNote}) => {
     const [newNote, setNewNote] = useState('')
 
     const handleChange = (event) => {
