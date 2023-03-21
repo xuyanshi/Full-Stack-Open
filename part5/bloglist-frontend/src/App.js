@@ -18,9 +18,13 @@ const App = () => {
         )
     }, [])
 
-    const handleLogin = (event) => {
+    const handleLogin = async (event) => {
         event.preventDefault()
-        console.log('logging in with', username, password)
+        try {
+
+        } catch (exception) {
+            
+        }
     }
 
     if (user === null) {
