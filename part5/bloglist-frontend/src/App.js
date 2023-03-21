@@ -162,7 +162,7 @@ const App = () => {
     return (
         <div>
             <h2>blogs</h2>
-            <Notification message={errorMessage}/>
+            {blogForm()}
             {blogs.map(blog =>
                 <Blog key={blog.id} blog={blog}/>
             )}
