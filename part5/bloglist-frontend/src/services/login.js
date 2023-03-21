@@ -8,7 +8,7 @@ const login = async credentials => {
 }
 
 const logout = async ({user}) => {
-    
+
 }
 
-export default {login}
+export default {login, logout}
