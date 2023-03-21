@@ -144,7 +144,7 @@ const App = () => {
                 type="Number"
                 onChange={handleLikesChange}
             />
-            <button type="submit">Save</button>
+            <button type="submit">create</button>
         </form>
     )
 
@@ -152,15 +152,13 @@ const App = () => {
         event.preventDefault()
         try {
             await loginService.logout(user)
-            blogService.setToken(user.token)
-            window.localStorage.setItem(
-                'loggedBlogappUser', JSON.stringify(user)
-            )
-            setUser(user)
+            blogService.deleteToken()
+            window.localStorage.removeItem('loggedBlogappUser')
+            setUser(null)
             setUsername('')
             setPassword('')
         } catch (exception) {
-            setErrorMessage('Wrong credentials')
+            setErrorMessage('Logout fails')
             setTimeout(() => {
                 setErrorMessage(null)
             }, 5000)
