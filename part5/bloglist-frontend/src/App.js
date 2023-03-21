@@ -13,6 +13,7 @@ const App = () => {
     const [newLikes, setNewLikes] = useState(0)
 
     const [errorMessage, setErrorMessage] = useState(null)
+    const [successMessage, setSuccessMessage] = useState(null)
 
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
@@ -72,6 +73,11 @@ const App = () => {
                 setNewUrl('')
                 setNewLikes(0)
             })
+
+        setSuccessMessage('Blog created!')
+        setTimeout(() => {
+            setSuccessMessage(null)
+        }, 5000)
     }
 
     const handleTitleChange = (event) => {
@@ -170,7 +176,7 @@ const App = () => {
         return (
             <div>
                 <h2>Log in to application</h2>
-                <Notification message={errorMessage}/>
+                <Notification message={errorMessage} type='error'/>
                 {loginForm()}
             </div>
         )
@@ -179,6 +185,7 @@ const App = () => {
     return (
         <div>
             <h2>blogs</h2>
+            <Notification message={successMessage} type='success'/>
             <h2>{username} is logging in</h2>
             <button type="submit" onSubmit={handleLogout}>logout</button>
             {blogForm()}
