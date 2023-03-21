@@ -11,8 +11,9 @@ const App = () => {
     const [newAuthor, setNewAuthor] = useState('')
     const [newUrl, setNewUrl] = useState('')
     const [newLikes, setNewLikes] = useState(0)
-    // const [showAll, setShowAll] = useState(true)
+
     const [errorMessage, setErrorMessage] = useState(null)
+
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [user, setUser] = useState(null)
@@ -77,6 +78,18 @@ const App = () => {
         setNewTitle(event.target.value)
     }
 
+    const handleAuthorChange = (event) => {
+        setNewAuthor(event.target.value)
+    }
+
+    const handleUrlChange = (event) => {
+        setNewUrl(event.target.value)
+    }
+
+    const handleLikesChange = (event) => {
+        setNewLikes(Number(event.target.value))
+    }
+
     const loginForm = () => (
         <form onSubmit={handleLogin}>
             <div>
@@ -103,11 +116,35 @@ const App = () => {
 
     const blogForm = () => (
         <form onSubmit={addBlog}>
+            <label htmlFor="title">Title: </label>
             <input
+                id="title"
                 value={newTitle}
                 onChange={handleTitleChange}
             />
-            <button type="submit">save</button>
+
+            <label htmlFor="author">Author: </label>
+            <input
+                id="author"
+                value={newAuthor}
+                onChange={handleAuthorChange}
+            />
+
+            <label htmlFor="url">URL: </label>
+            <input
+                id="url"
+                value={newUrl}
+                onChange={handleUrlChange}
+            />
+
+            <label htmlFor="likes">Likes: </label>
+            <input
+                id="likes"
+                value={newLikes}
+                type="Number"
+                onChange={handleLikesChange}
+            />
+            <button type="submit">Save</button>
         </form>
     )
 
