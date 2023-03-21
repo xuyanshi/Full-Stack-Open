@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import {useEffect, useState} from 'react'
 import Blog from './components/Blog'
 import blogService from './services/blogs'
 
@@ -9,19 +9,24 @@ const App = () => {
     const [errorMessage, setErrorMessage] = useState(null)
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
-    const [user,setUser] = useState(null)
+    const [user, setUser] = useState(null)
 
     useEffect(() => {
         blogService.getAll().then(blogs =>
-            setBlogs( blogs )
+            setBlogs(blogs)
         )
     }, [])
+
+    const handleLogin = (event) => {
+        event.preventDefault()
+        console.log('logging in with', username, password)
+    }
 
     return (
         <div>
             <h2>blogs</h2>
             {blogs.map(blog =>
-                <Blog key={blog.id} blog={blog} />
+                <Blog key={blog.id} blog={blog}/>
             )}
         </div>
     )
