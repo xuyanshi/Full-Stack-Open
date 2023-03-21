@@ -24,8 +24,12 @@ const App = () => {
     const [loginVisible, setLoginVisible] = useState(false)
 
     useEffect(() => {
-        blogService.getAll().then(blogs =>
-            setBlogs(blogs)
+        blogService.getAll().then(blogs => {
+                blogs.sort((a, b) => {
+                    return a.likes - b.likes
+                })
+                setBlogs(blogs)
+            }
         )
     }, [])
 
@@ -72,6 +76,10 @@ const App = () => {
             .create(blogObject)
             .then(returnedBlog => {
                 setBlogs(blogs.concat(returnedBlog))
+                blogs.sort((a, b) => {
+                    return a.likes - b.likes
+                })
+                setBlogs(blogs)
                 setNewTitle('')
                 setNewAuthor('')
                 setNewUrl('')
