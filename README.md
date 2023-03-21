@@ -1,11 +1,12 @@
 # Full Stack Web Development
 Full Stack Web Development, University of Helsinki
 
-**Start Date: Sat Mar 11 2023**
+**Start Date:** Sat Mar 11 2023
 
-**Finish Date:**
+**Finish Date (Parts 0-7, core courses with 2 extensions):**
 
 ## Parts (Completion Date)
+#### Core courses with 2 extensions
 - [x] Part 0: Fundamentals of Web apps (2023-03-11)
 - [x] Part 1: Introduction to React (2023-03-11)
 - [x] Part 2: Communicating with server (2023-03-14)
@@ -14,6 +15,7 @@ Full Stack Web Development, University of Helsinki
 - [ ] Part 5: Testing React apps
 - [ ] Part 6: Advanced state management
 - [ ] Part 7: React router, custom hooks, styling app with CSS and webpack (Certificate, 2023)
+#### Multiple extensions
 - [ ] Part 8: GraphQL
 - [ ] Part 9: TypeScript
 - [ ] Part 10: React Native
@@ -21,7 +23,7 @@ Full Stack Web Development, University of Helsinki
 - [ ] Part 12: Containers
 - [ ] Part 13: Using relational databases
 
-## Certificates
+## Certificates (English and Finnish)
 ---
 
 [Course Homepage](https://fullstackopen.com/en)
