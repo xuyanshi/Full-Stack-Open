@@ -22,6 +22,17 @@ const App = () => {
         console.log('logging in with', username, password)
     }
 
+    if (user === null) {
+        return (
+            <div>
+                <h2>Log in to application</h2>
+                <form>
+                    //...
+                </form>
+            </div>
+        )
+    }
+
     return (
         <div>
             <h2>blogs</h2>
@@ -30,6 +41,8 @@ const App = () => {
             )}
         </div>
     )
+
+
 }
 
 export default App
