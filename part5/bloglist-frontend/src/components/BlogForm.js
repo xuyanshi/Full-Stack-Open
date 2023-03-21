@@ -1,17 +1,36 @@
-const BlogForm = ({onSubmit, value, handleChange}) => {
+import {useState} from 'react'
+// TODO: unfinished
+const blogForm = ({createNote}) => {
+    const [newNote, setNewNote] = useState('')
+
+    const handleChange = (event) => {
+        setNewNote(event.target.value)
+    }
+
+    const addNote = (event) => {
+        event.preventDefault()
+        createNote({
+            content: newNote,
+            important: Math.random() > 0.5,
+        })
+
+        setNewNote('')
+    }
+
     return (
         <div>
-            <h3>Create a new blog</h3>
+            <h2>Create a new note</h2>
 
-            {/*<form onSubmit={onSubmit}>*/}
-            {/*    <input*/}
-            {/*        value={value}*/}
-            {/*        onChange={handleChange}*/}
-            {/*    />*/}
-            {/*    <button type="submit">save</button>*/}
-            {/*</form>*/}
+            <form onSubmit={addNote}>
+                <input
+                    value={newNote}
+                    onChange={handleChange}
+                />
+                <button type="submit">save</button>
+            </form>
         </div>
     )
 }
+
 
 export default BlogForm
