@@ -7,7 +7,10 @@ import loginService from './services/login'
 
 const App = () => {
     const [blogs, setBlogs] = useState([])
-    const [newBlog, setNewBlog] = useState('')
+    const [newTitle, setNewTitle] = useState('')
+    const [newAuthor, setNewAuthor] = useState('')
+    const [newUrl, setNewUrl] = useState('')
+    const [newLikes, setNewLikes] = useState(0)
     // const [showAll, setShowAll] = useState(true)
     const [errorMessage, setErrorMessage] = useState(null)
     const [username, setUsername] = useState('')
@@ -20,6 +23,15 @@ const App = () => {
         )
     }, [])
 
+    useEffect(() => {
+        const loggedUserJSON = window.localStorage.getItem('loggedBlogappUser')
+        if (loggedUserJSON) {
+            const user = JSON.parse(loggedUserJSON)
+            setUser(user)
+            blogService.setToken(user.token)
+        }
+    }, [])
+
     const handleLogin = async (event) => {
         event.preventDefault()
         try {
@@ -27,6 +39,9 @@ const App = () => {
                 username, password
             })
             blogService.setToken(user.token)
+            window.localStorage.setItem(
+                'loggedBlogappUser', JSON.stringify(user)
+            )
             setUser(user)
             setUsername('')
             setPassword('')
@@ -40,21 +55,26 @@ const App = () => {
 
     const addBlog = (event) => {
         event.preventDefault()
-        const noteObject = {
-            content: newBlog,
-            important: Math.random() > 0.5,
+        const blogObject = {
+            title: newTitle,
+            author: newAuthor,
+            url: newUrl,
+            likes: newLikes,
         }
 
         blogService
-            .create(noteObject)
-            .then(returnedNote => {
-                setBlogs(blogs.concat(returnedNote))
-                setNewBlog('')
+            .create(blogObject)
+            .then(returnedBlog => {
+                setBlogs(blogs.concat(returnedBlog))
+                setNewTitle('')
+                setNewAuthor('')
+                setNewUrl('')
+                setNewLikes(0)
             })
     }
 
-    const handleBlogChange = (event) => {
-        setNewBlog(event.target.value)
+    const handleTitleChange = (event) => {
+        setNewTitle(event.target.value)
     }
 
     const loginForm = () => (
@@ -84,8 +104,8 @@ const App = () => {
     const blogForm = () => (
         <form onSubmit={addBlog}>
             <input
-                value={newBlog}
-                onChange={handleBlogChange}
+                value={newTitle}
+                onChange={handleTitleChange}
             />
             <button type="submit">save</button>
         </form>
