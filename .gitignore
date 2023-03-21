@@ -1,4 +1,5 @@
 */node_modules
+node_modules
 node_modules/*
 *\node_modules\
 part3/phonebook/node_modules/
@@ -15,3 +16,4 @@ part4/bloglist/.idea/workspace.xml
 part4/bloglist/.idea/workspace.xml
 *.iml
 part5/bloglist-frontend/node_modules/*
+part5/bloglist-backend/node_modules/*
