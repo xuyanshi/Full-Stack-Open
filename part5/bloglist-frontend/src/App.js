@@ -148,6 +148,10 @@ const App = () => {
         </form>
     )
 
+    const handleLogout = async (event) => {
+        event.preventDefault()
+    }
+
 
     if (user === null) {
         return (
@@ -162,6 +166,7 @@ const App = () => {
     return (
         <div>
             <h2>blogs</h2>
+            <h2>{username} is logging in</h2>
             {blogForm()}
             <ul>
                 {blogs.map(blog =>
