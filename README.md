@@ -33,7 +33,7 @@ Full Stack Web Development, University of Helsinki
 [Other Certificates](./certificates/others)
 
 
----
+## Links
 
 [Course Homepage](https://fullstackopen.com/en)
 
