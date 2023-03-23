@@ -30,7 +30,7 @@ Full Stack Web Development, University of Helsinki
 
 [Certificate 1 in Finnish](./certificates/certificate-fullstack-en.png)
 
-
+[Other Certificates](./certificates/others)
 
 
 ---
