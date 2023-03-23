@@ -25,6 +25,14 @@ Full Stack Web Development, University of Helsinki
 - [ ] Part 13: Using relational databases
 
 ## Certificates (English and Finnish)
+
+![Certificates 1 in English](./certificates/certificate-fullstack-en.png)
+
+[Certificate 1 in Finnish](../certificate-fullstack-en.png)
+
+
+
+
 ---
 
 [Course Homepage](https://fullstackopen.com/en)
