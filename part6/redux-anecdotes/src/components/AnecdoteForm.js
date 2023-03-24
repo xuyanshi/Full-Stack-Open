@@ -1,4 +1,7 @@
+import {useDispatch} from "react-redux";
+
 const AnecdoteForm = () => {
+    const dispatch = useDispatch()
     return (
         <div>
             <form>
