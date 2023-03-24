@@ -25,6 +25,9 @@ const reducer = (state = initialState, action) => {
 
     switch (action.type) {
         case '':
+            return initialState
+        default:
+            return initialState
     }
     return state
 }
