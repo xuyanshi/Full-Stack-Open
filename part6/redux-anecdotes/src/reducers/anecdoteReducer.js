@@ -37,6 +37,8 @@ const reducer = (state = initialState, action) => {
             console.log(newState)
             newState.sort((a1, a2) => a1.votes - a2.votes)
             return newState
+        case 'NEW_ANECDOTE':
+            return [...state, action.payload]
         default:
             return state
     }
