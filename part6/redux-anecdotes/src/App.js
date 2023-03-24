@@ -1,4 +1,6 @@
 import {useSelector, useDispatch} from 'react-redux'
+import AnecdoteForm from './components/AnecdoteForm'
+import AnecdoteList from './components/AnecdoteList'
 
 const App = () => {
     const anecdotes = useSelector(state => state)
@@ -6,7 +8,7 @@ const App = () => {
 
     const vote = (id) => {
         console.log('vote', id)
-        
+
     }
 
     return (
