@@ -14,7 +14,9 @@ Full Stack Web Development, University of Helsinki
 ## Schedule
 **Start Date:** Sat Mar 11 2023
 
-**Finish Date (Parts 0-7, core courses with 2 extensions):**
+**Finish Date (Parts 0-7, core courses with 2 extensions): **
+
+**Finish Date (All parts): TODO**
 
 
 ## Parts (Completion Date)
@@ -28,6 +30,7 @@ Full Stack Web Development, University of Helsinki
 ---
 - [ ] Part 6: Advanced state management (2023-03-2)
 - [ ] Part 7: React router, custom hooks, styling app with CSS and webpack (Certificate, 2023)
+
 #### Multiple extensions (TODO)
 - [ ] Part 8: GraphQL
 - [ ] Part 9: TypeScript
