@@ -14,7 +14,7 @@ Full Stack Web Development, University of Helsinki
 ## Schedule
 **Start Date:** Sat Mar 11 2023
 
-**Finish Date (Parts 0-7, core courses with 2 extensions): **
+**Finish Date (Parts 0-7, core courses with 2 extensions):**
 
 **Finish Date (All parts): TODO**
 
