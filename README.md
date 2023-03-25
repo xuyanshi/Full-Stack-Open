@@ -11,10 +11,10 @@ Full Stack Web Development, University of Helsinki
 - [x] Part 1: Introduction to React (2023-03-11)
 - [x] Part 2: Communicating with server (2023-03-14)
 - [x] Part 3: Programming a server with NodeJS and Express (2023-03-16)
----
-- [x] Part 4: Testing Express servers, user administration (2023-03-20)
+- [x] Part 4: Testing Express servers, user administration (2023-03-20 *)
 - [x] Part 5: Testing React apps (2023-03-23)
-- [ ] Part 6: Advanced state management
+---
+- [ ] Part 6: Advanced state management (2023-03-2)
 - [ ] Part 7: React router, custom hooks, styling app with CSS and webpack (Certificate, 2023)
 #### Multiple extensions (TODO)
 - [ ] Part 8: GraphQL
