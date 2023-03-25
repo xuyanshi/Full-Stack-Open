@@ -29,7 +29,7 @@ Full Stack Web Development, University of Helsinki
 - [x] Part 5*: Testing React apps (2023-03-23)
 ---
 - [x] Part 6*: Advanced state management (2023-03-26)
-- [ ] Part 7: React router, custom hooks, styling app with CSS and webpack (Certificate, 2023)
+- [ ] Part 7: React router, custom hooks, styling app with CSS and webpack (2023-)
 
 #### Multiple extensions (TODO)
 - [ ] Part 8: GraphQL
