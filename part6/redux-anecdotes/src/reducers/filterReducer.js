@@ -1,3 +1,8 @@
+const initialState = {
+    type: 'ALL',
+    payload: {filter: 'ALL', filterWord: ''}
+}
+
 const filterReducer = (state = 'ALL', action) => {
     console.log('ACTION: ', action)
     switch (action.type) {

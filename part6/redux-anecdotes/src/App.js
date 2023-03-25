@@ -1,4 +1,3 @@
-import {useSelector, useDispatch} from 'react-redux'
 import AnecdoteForm from './components/AnecdoteForm'
 import AnecdoteList from './components/AnecdoteList'
 import VisibilityFilter from "./components/VisibilityFilter";
@@ -10,7 +9,6 @@ const App = () => {
             <VisibilityFilter/>
             <AnecdoteList/>
             <AnecdoteForm/>
-
         </div>
     )
 }
