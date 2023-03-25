@@ -1,9 +1,21 @@
-# Full Stack Web Development
+# Full Stack Open
 Full Stack Web Development, University of Helsinki
 
+
+## Certificates (English and Finnish)
+
+![Certificates 1 in English](./certificates/certificate-fullstack-en.png)
+
+![Certificate 1 in Finnish](./certificates/certificate-fullstack-fi.png)
+
+[Other Certificates](./certificates/others)
+
+
+## Schedule
 **Start Date:** Sat Mar 11 2023
 
 **Finish Date (Parts 0-7, core courses with 2 extensions):**
+
 
 ## Parts (Completion Date)
 #### Core courses with 2 extensions
@@ -23,14 +35,6 @@ Full Stack Web Development, University of Helsinki
 - [ ] Part 11: CI/CD
 - [ ] Part 12: Containers
 - [ ] Part 13: Using relational databases
-
-## Certificates (English and Finnish)
-
-![Certificates 1 in English](./certificates/certificate-fullstack-en.png)
-
-[Certificate 1 in Finnish](./certificates/certificate-fullstack-en.png)
-
-[Other Certificates](./certificates/others)
 
 
 ## Links
