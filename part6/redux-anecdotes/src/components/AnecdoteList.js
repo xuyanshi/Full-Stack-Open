@@ -12,7 +12,7 @@ const AnecdoteList = () => {
         }
         let filteredAnecdotes = []
         for (const anecdote of state.anecdotes) {
-            if (anecdote.content.search(state.filterWord) !== -1) {
+            if (anecdote.content.includes(state.filterWord)) {
                 filteredAnecdotes = filteredAnecdotes.concat(anecdote)
             }
         }
