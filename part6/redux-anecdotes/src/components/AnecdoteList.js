@@ -10,7 +10,8 @@ const AnecdoteList = () => {
         if (state.filter === 'ALL') {
             return state.anecdotes
         }
-        
+        let filteredAnecdotes = []
+        return filteredAnecdotes
     })
     const dispatch = useDispatch()
     return (
