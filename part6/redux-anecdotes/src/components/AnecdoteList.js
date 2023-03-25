@@ -1,10 +1,6 @@
 import {useDispatch, useSelector} from "react-redux";
 import {vote} from "../reducers/anecdoteReducer";
 
-const Anecdote = () => {
-
-}
-
 const AnecdoteList = () => {
     const anecdotes = useSelector(state => {
         if (state.filter === 'ALL') {
