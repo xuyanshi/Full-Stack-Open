@@ -6,7 +6,7 @@ const VisibilityFilter = (props) => {
     return (
         <div>
             filter<input type="text" name="filter" id="filter"
-                         onChange={() => dispatch(filterChange('ALL', document.getElementById('filter').value))}/>
+                         onChange={() => dispatch(filterChange('SET_FILTER', document.getElementById('filter').value))}/>
         </div>
     )
 }

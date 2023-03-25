@@ -11,6 +11,11 @@ const AnecdoteList = () => {
             return state.anecdotes
         }
         let filteredAnecdotes = []
+        for (const anecdote of state.anecdotes) {
+            if (anecdote.content.indexOf(state.filterWord) !== -1) {
+                filteredAnecdotes = filteredAnecdotes.concat(anecdote)
+            }
+        }
         return filteredAnecdotes
     })
     const dispatch = useDispatch()
