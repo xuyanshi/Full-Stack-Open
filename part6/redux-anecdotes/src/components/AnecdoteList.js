@@ -6,12 +6,17 @@ const AnecdoteList = () => {
         if (state.filter === 'ALL') {
             return state.anecdotes
         }
+        console.log("state.anecdotes", state.anecdotes)
+        console.log("state.filter", state.filter)
+        console.log("state.filterWord", state.filter.filterWord)
         let filteredAnecdotes = []
         for (const anecdote of state.anecdotes) {
-            if (anecdote.content.includes(state.filterWord)) {
+            console.log("anecdote", anecdote)
+            if (anecdote.content.includes(state.filter.filterWord)) {
                 filteredAnecdotes = filteredAnecdotes.concat(anecdote)
             }
         }
+        console.log("filteredAnecdotes", filteredAnecdotes)
         return filteredAnecdotes
     })
     const dispatch = useDispatch()
