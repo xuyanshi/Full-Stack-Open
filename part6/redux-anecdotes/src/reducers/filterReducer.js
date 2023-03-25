@@ -8,10 +8,10 @@ const filterReducer = (state = 'ALL', action) => {
     }
 }
 
-export const filterChange = filter => {
+export const filterChange = (filter, filterWord) => {
     return {
         type: 'SET_FILTER',
-        payload: {filter},
+        payload: {filter, filterWord},
     }
 }
 

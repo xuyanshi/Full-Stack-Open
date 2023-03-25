@@ -6,7 +6,12 @@ const Anecdote = () => {
 }
 
 const AnecdoteList = () => {
-    const anecdotes = useSelector(state => state.anecdotes)
+    const anecdotes = useSelector(state => {
+        if (state.filter === 'ALL') {
+            return state.anecdotes
+        }
+        
+    })
     const dispatch = useDispatch()
     return (
         <div>
