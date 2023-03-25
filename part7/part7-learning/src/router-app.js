@@ -38,13 +38,13 @@ const App = () => {
     return (
         <div>
             <div>
-                <a href="" onClick={toPage('home')} style={padding}>
+                <a href="." onClick={toPage('home')} style={padding}>
                     home
                 </a>
-                <a href="" onClick={toPage('notes')} style={padding}>
+                <a href="." onClick={toPage('notes')} style={padding}>
                     notes
                 </a>
-                <a href="" onClick={toPage('users')} style={padding}>
+                <a href="." onClick={toPage('users')} style={padding}>
                     users
                 </a>
             </div>
