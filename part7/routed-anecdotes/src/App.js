@@ -18,12 +18,12 @@ const Menu = ({anecdotes, addNew, notification, setNotification}) => {
                 <Link to="/" style={padding}>anecdotes</Link>
                 <Link to="/create" style={padding}>create new</Link>
                 <Link to="/about" style={padding}>about</Link>
-                <Notification notification={notification}/>
+                <Notification notification={notification} setNotification={setNotification}/>
             </div>
 
             <Routes>
                 <Route path='/' element={<AnecdoteList anecdotes={anecdotes}/>}/>
-                <Route path='/create' element={<CreateNew addNew={addNew}/>}/>
+                <Route path='/create' element={<CreateNew addNew={addNew} setNotification={setNotification}/>}/>
                 <Route path='/about' element={<About/>}/>
                 <Route path='/anecdotes/:id' element={<Anecdote anecdotes={anecdotes}/>}/>
             </Routes>
@@ -96,7 +96,7 @@ const CreateNew = (props) => {
             votes: 0
         })
         navigate('/')
-        se
+        props.setNotification(`a new anecdote ${content} created!`)
 
     }
 
@@ -133,6 +133,9 @@ const Notification = ({notification, setNotification}) => {
         }
 
     })
+    return (
+        <p>{notification}</p>
+    )
 }
 
 const App = () => {
