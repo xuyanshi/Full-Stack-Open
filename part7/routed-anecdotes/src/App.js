@@ -30,7 +30,14 @@ const Menu = ({anecdotes, addNew}) => {
 }
 
 const Anecdote = ({anecdotes}) => {
-
+    const id = useParams().id
+    const anecdote = anecdotes.find(a => a.id === Number(id))
+    return (
+        <div>
+            <h2>{anecdote.content}</h2>
+            <p>has {anecdote.votes} votes</p>
+        </div>
+    )
 }
 const AnecdoteList = ({anecdotes}) => (
     <div>
