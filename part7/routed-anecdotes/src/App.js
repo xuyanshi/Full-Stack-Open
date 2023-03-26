@@ -4,7 +4,8 @@ import {
     Routes,
     Route,
     Link,
-    useParams
+    useParams,
+    useNavigate
 } from 'react-router-dom'
 
 const Menu = ({anecdotes, addNew}) => {
@@ -83,6 +84,7 @@ const CreateNew = (props) => {
     const [author, setAuthor] = useState('')
     const [info, setInfo] = useState('')
 
+    const navigate = useNavigate()
 
     const handleSubmit = (e) => {
         e.preventDefault()
