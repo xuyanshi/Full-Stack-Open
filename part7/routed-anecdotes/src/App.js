@@ -27,6 +27,9 @@ const Menu = ({anecdotes, addNew}) => {
     )
 }
 
+const Anecdote = ({anecdotes}) => {
+
+}
 const AnecdoteList = ({anecdotes}) => (
     <div>
         <h2>Anecdotes</h2>
