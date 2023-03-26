@@ -3,7 +3,8 @@ import {
     BrowserRouter as Router,
     Routes,
     Route,
-    Link
+    Link,
+    useParams
 } from 'react-router-dom'
 
 const Menu = ({anecdotes, addNew}) => {
@@ -22,6 +23,7 @@ const Menu = ({anecdotes, addNew}) => {
                 <Route path='/' element={<AnecdoteList anecdotes={anecdotes}/>}/>
                 <Route path='/create' element={<CreateNew addNew={addNew}/>}/>
                 <Route path='/about' element={<About/>}/>
+                <Route path='/anecdotes/:id' element={<Anecdote anecdotes={anecdotes}/>}/>
             </Routes>
         </Router>
     )
