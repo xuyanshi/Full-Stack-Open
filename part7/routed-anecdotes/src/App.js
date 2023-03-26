@@ -8,7 +8,7 @@ import {
     useNavigate
 } from 'react-router-dom'
 
-const Menu = ({anecdotes, addNew, notification}) => {
+const Menu = ({anecdotes, addNew, notification, setNotification}) => {
     const padding = {
         paddingRight: 5
     }
@@ -18,6 +18,7 @@ const Menu = ({anecdotes, addNew, notification}) => {
                 <Link to="/" style={padding}>anecdotes</Link>
                 <Link to="/create" style={padding}>create new</Link>
                 <Link to="/about" style={padding}>about</Link>
+                <Notification notification={notification}/>
             </div>
 
             <Routes>
@@ -95,7 +96,7 @@ const CreateNew = (props) => {
             votes: 0
         })
         navigate('/')
-
+        se
 
     }
 
@@ -176,7 +177,7 @@ const App = () => {
     return (
         <div>
             <h1>Software anecdotes</h1>
-            <Menu anecdotes={anecdotes} addNew={addNew} notification={notification}/>
+            <Menu anecdotes={anecdotes} addNew={addNew} notification={notification} setNotification={setNotification}/>
             <Footer/>
         </div>
     )
