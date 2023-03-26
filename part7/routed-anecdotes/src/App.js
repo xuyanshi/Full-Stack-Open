@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import {
     BrowserRouter as Router,
     Routes,
@@ -8,7 +8,7 @@ import {
     useNavigate
 } from 'react-router-dom'
 
-const Menu = ({anecdotes, addNew}) => {
+const Menu = ({anecdotes, addNew, notification}) => {
     const padding = {
         paddingRight: 5
     }
@@ -41,7 +41,7 @@ const Anecdote = ({anecdotes}) => {
         </div>
     )
 }
-const AnecdoteList = ({anecdotes}) => (
+const AnecdoteList = ({anecdotes, notification}) => (
     <div>
         <h2>Anecdotes</h2>
         <ul>
@@ -94,6 +94,9 @@ const CreateNew = (props) => {
             info,
             votes: 0
         })
+        navigate('/')
+
+
     }
 
     return (
@@ -117,6 +120,18 @@ const CreateNew = (props) => {
         </div>
     )
 
+}
+
+const Notification = ({notification, setNotification}) => {
+    useEffect(() => {
+        let timeout = null
+        if (notification) {
+            timeout = setTimeout(() => {
+                setNotification('')
+            }, 5000)
+        }
+
+    })
 }
 
 const App = () => {
@@ -161,7 +176,7 @@ const App = () => {
     return (
         <div>
             <h1>Software anecdotes</h1>
-            <Menu anecdotes={anecdotes} addNew={addNew}/>
+            <Menu anecdotes={anecdotes} addNew={addNew} notification={notification}/>
             <Footer/>
         </div>
     )
