@@ -2,7 +2,6 @@
 Full Stack Web Development, University of Helsinki
 
 
-
 ![Certificates 1 in English](./certificate-fullstack-en.png)
 
 
